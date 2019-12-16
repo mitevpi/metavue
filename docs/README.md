@@ -2,124 +2,119 @@
 
 ### Table of Contents
 
--   [Triple][1]
-    -   [triple][2]
+-   [Files][1]
+    -   [GetVue][2]
         -   [Parameters][3]
--   [BiggerTriple][4]
-    -   [triple][5]
-        -   [Parameters][6]
--   [Polygon][7]
-    -   [sayName][8]
-    -   [sayHistory][9]
--   [Square][10]
-    -   [area][11]
-    -   [area][12]
+    -   [Read][4]
+        -   [Parameters][5]
+-   [Imports][6]
+    -   [ES6][7]
+        -   [Parameters][8]
+    -   [VueComponents][9]
+        -   [Parameters][10]
+-   [Methods][11]
+    -   [ParseStructure][12]
         -   [Parameters][13]
--   [Rectangle][14]
-    -   [sayName][15]
 
-## Triple
+## Files
 
-Description of Triple Class.
+Description of Files Class.
 
-### triple
+### GetVue
 
-Triple the number.
+Get all the Vue files in the input directory (collects files in nested folders too).
 
 #### Parameters
 
--   `n` **[Number][16]** A number to triple.
+-   `directory`  The directory to search for .vue files in.
 
-Returns **[Number][16]** The tripled number.
+Returns **[Promise][14]&lt;[Array][15]&lt;[String][16]>>** An array of file paths of .vue files.
 
-## BiggerTriple
+### Read
 
-Description of BiggerTriple Class.
-
-### triple
-
-Triple the number twice.
+Get the raw text data of a file.
 
 #### Parameters
 
--   `n` **[Number][16]** A number to triple.
+-   `filePath`  The path the file is at.
 
-Returns **[Number][16]** The bigger tripled number
+Returns **[string][16]** Raw text content of the file.
 
-## Polygon
+## Imports
 
-Description of Polygon Class.
+Description of Imports Class.
 
-### sayName
+### ES6
 
-Return name.
-
-Returns **[String][17]** Sample string.
-
-### sayHistory
-
-Return height.
-
-Returns **[String][17]** Sample string.
-
-## Square
-
-Description of Square Class.
-
-### area
-
-Return area.
-
-Returns **[Number][16]** The Area.
-
-### area
-
-Set the area to new number
+Extract the strings used to import modules using ES6 syntax.
 
 #### Parameters
 
--   `value` **[Number][16]** A number to use to set value.
+-   `fileString`  The raw text content of the file (.vue).
 
-## Rectangle
+Returns **([Array][15]&lt;[string][16]> | [boolean][17] | any | RegExpMatchArray | [Promise][14]&lt;([Response][18] \| [undefined][19])>)** If any ES6 imports are found,
+the original import strings will be returned.
 
-Description of Rectangle Class.
+### VueComponents
 
-### sayName
+Extract the imported .vue components in the parent file.
 
-Return name.
+#### Parameters
 
-Returns **[String][17]** Sample string.
+-   `fileString`  The raw text content of the file (.vue).
 
-[1]: #triple
+Returns **(null | [Array][15]&lt;[string][16]>)** An array of imported .vue components.
 
-[2]: #triple-1
+## Methods
+
+Description of Methods Class.
+
+### ParseStructure
+
+Parse the structure of the Vue application and its components.
+
+#### Parameters
+
+-   `directory`  The directory from which to read .vue files.
+
+Returns **[Promise][14]&lt;[Array][15]&lt;[Object][20]>>** An array of objects containing properties related to the application structure.
+
+[1]: #files
+
+[2]: #getvue
 
 [3]: #parameters
 
-[4]: #biggertriple
+[4]: #read
 
-[5]: #triple-2
+[5]: #parameters-1
 
-[6]: #parameters-1
+[6]: #imports
 
-[7]: #polygon
+[7]: #es6
 
-[8]: #sayname
+[8]: #parameters-2
 
-[9]: #sayhistory
+[9]: #vuecomponents
 
-[10]: #square
+[10]: #parameters-3
 
-[11]: #area
+[11]: #methods
 
-[12]: #area-1
+[12]: #parsestructure
 
-[13]: #parameters-2
+[13]: #parameters-4
 
-[14]: #rectangle
+[14]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise
 
-[15]: #sayname-1
+[15]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array
 
-[16]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number
+[16]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String
 
-[17]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String
+[17]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean
+
+[18]: https://developer.mozilla.org/docs/Web/Guide/HTML/HTML5
+
+[19]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/undefined
+
+[20]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object
