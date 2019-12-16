@@ -5,9 +5,7 @@ test("import Files", () => {
 });
 
 test("Files.GetVue", async () => {
-  const temp = await Files.GetVue(
-    "C:\\Users\\pmitev\\Documents\\GitHub\\stroll-app\\src"
-  );
+  const temp = await Files.GetVue("/Users/mitevpi/Documents/GitHub/stroll-app");
   expect(temp.length).toBeGreaterThan(0);
 
   temp.map(file => {
@@ -17,7 +15,7 @@ test("Files.GetVue", async () => {
 
 test("Files.Read", async () => {
   const paths = await Files.GetVue(
-    "C:\\Users\\pmitev\\Documents\\GitHub\\stroll-app\\src"
+    "/Users/mitevpi/Documents/GitHub/stroll-app"
   );
   const read = paths.map(filePath => Files.Read(filePath));
   read.map(file => {

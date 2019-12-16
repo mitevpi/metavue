@@ -1,9 +1,9 @@
 {
-  "name": "js-module-template",
+  "name": "metavue",
   "version": "0.0.2",
   "description": "My JS/NodeJS module",
   "license": "MIT",
-  "repository": "mitevpi/js-module-template",
+  "repository": "mitevpi/metavue",
   "main": "dist/index.js",
   "author": {
     "name": "Petr Mitev",
@@ -24,7 +24,7 @@
     "docs": "documentation build src/index.js -f md -o docs/README.md && documentation build src/** -f html -o docs",
     "postdocs": "",
     "clean": "rimraf dist",
-    "prebuild": "npm run docs && npm run clean",
+    "prebuild": "npm run clean",
     "build": "babel src -d dist",
     "prerelease": "npm run lint && npm test && npm run build",
     "release": "standard-version",
@@ -57,7 +57,6 @@
     "@babel/core": "7.7.5",
     "@babel/plugin-proposal-class-properties": "7.7.4",
     "@babel/preset-env": "7.7.6",
-    "@babel/preset-flow": "7.7.4",
     "babel-eslint": "10.0.3",
     "babel-jest": "24.9.0",
     "documentation": "12.1.4",
