@@ -11,6 +11,8 @@
     "jest/globals": true
   },
   "rules": {
+    "prefer-destructuring": "off",
+    "array-callback-return": "off",
     "no-param-reassign": "off",
     "import/prefer-default-export": "off",
     "max-classes-per-file": "off",

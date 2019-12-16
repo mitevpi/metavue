@@ -2,15 +2,6 @@ import * as fs from "fs";
 import * as path from "path";
 
 export class Files {
-  // static GetVue(path) {
-  //   const vueFiles = [];
-  //   fs.readdirSync(path).forEach(file => {
-  //     console.log(file);
-  //     vueFiles.push(file);
-  //   });
-  //   return vueFiles;
-  // }
-
   /**
    * Get all the Vue files in the input directory (collects files in nested folders too).
    * @param directory The directory to search for .vue files in.
@@ -27,10 +18,12 @@ export class Files {
     return Array.prototype.concat(...files).filter(f => f.includes(".vue"));
   }
 
-  static async Read(filePath) {
-    fs.readFile(filePath, "utf8", async (err, data) => {
-      if (err) throw err;
-      await data;
-    });
+  /**
+   * Get the raw text data of a file.
+   * @param filePath The path the file is at.
+   * @returns {string} Raw text content of the file.
+   */
+  static Read(filePath) {
+    return fs.readFileSync(filePath, "utf8");
   }
 }
