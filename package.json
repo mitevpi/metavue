@@ -1,6 +1,6 @@
 {
   "name": "metavue",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "Utility for extracting metadata from Vue.js applications & components related to code style and architecture.",
   "license": "MIT",
   "repository": "mitevpi/metavue",
