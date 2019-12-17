@@ -15,7 +15,11 @@ export class Files {
         return dirEntry.isDirectory() ? this.GetVue(res) : res;
       })
     );
-    return Array.prototype.concat(...files).filter(f => f.endsWith(".vue"));
+    return Array.prototype
+      .concat(...files)
+      .filter(f => !f.includes(".js"))
+      .filter(f => !f.includes(".ts"))
+      .filter(f => f.endsWith(".vue"));
   }
 
   /**

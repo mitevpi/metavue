@@ -1,10 +1,19 @@
 # MetaVue
 
-[![Generic badge](https://img.shields.io/badge/Docs-Web-Green.svg)](https://mitevpi.github.io/metavue/) [![Generic badge](https://img.shields.io/badge/Docs-MD-Green.svg)](docs/README.md) [![Generic badge](https://img.shields.io/badge/Samples-JS-Green.svg)](samples)
+[![Generic badge](https://img.shields.io/badge/Docs-Web-Green.svg)](https://mitevpi.github.io/metavue/)
+[![Generic badge](https://img.shields.io/badge/Docs-MD-Green.svg)](docs)
 
-[![GitHub issues](https://img.shields.io/github/issues/mitevpi/metavue.svg)](https://github.com/mitevpi/metavue/issues) [![GitHub last commit](https://img.shields.io/github/last-commit/mitevpi/metavue.svg)](https://github.com/mitevpi/metavue/commits/master)
+[![npm](https://img.shields.io/npm/v/metavue.svg)](https://www.npmjs.com/package/metavue)
+[![npm bundle size](https://img.shields.io/bundlephobia/min/metavue.svg)](https://bundlephobia.com/result?p=@metavue)
+[![npm](https://img.shields.io/npm/dw/metavue.svg)](https://www.npmjs.com/package/metavue)
+[![npm2](https://img.shields.io/npm/dt/metavue.svg)](https://www.npmjs.com/package/metavue)
 
-Utility for extracting metadata between of Vue.js components in application architecture.
+[![GitHub issues](https://img.shields.io/github/issues/mitevpi/metavue.svg)](https://github.com/mitevpi/metavue/issues) ![David](https://img.shields.io/david/dev/mitevpi/metavue.svg)
+[![GitHub last commit](https://img.shields.io/github/last-commit/mitevpi/metavue.svg)](https://github.com/mitevpi/metavue/commits/master)
+
+
+Utility for extracting metadata between of Vue.js components in
+application architecture.
 
 ## Usage
 
@@ -70,3 +79,5 @@ the metadata of your Vue application.
     "child": "LogIn"
 },
 ```
+
+![sample network](assets/images/powerbi-parent-child2.png)

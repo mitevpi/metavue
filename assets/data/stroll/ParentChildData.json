@@ -1,0 +1,62 @@
+[
+    {
+        "parent": "App",
+        "child": "Footer"
+    },
+    {
+        "parent": "App",
+        "child": "Header"
+    },
+    {
+        "parent": "App",
+        "child": "Results"
+    },
+    {
+        "parent": "App",
+        "child": "About"
+    },
+    {
+        "parent": "App",
+        "child": "UserInterface"
+    },
+    {
+        "parent": "App",
+        "child": "Splash"
+    },
+    {
+        "parent": "Header",
+        "child": "UIMenu"
+    },
+    {
+        "parent": "Results",
+        "child": "UIResultsCard"
+    },
+    {
+        "parent": "UIControls",
+        "child": "UIFilterModal"
+    },
+    {
+        "parent": "UIResultsCard",
+        "child": "UIRadarChart"
+    },
+    {
+        "parent": "UIResultsCard",
+        "child": "UIScore"
+    },
+    {
+        "parent": "UIResultsCard",
+        "child": "UIMap"
+    },
+    {
+        "parent": "UserInterface",
+        "child": "UIControls"
+    },
+    {
+        "parent": "UserInterface",
+        "child": "UIError"
+    },
+    {
+        "parent": "UserInterface",
+        "child": "UILoading"
+    }
+]
