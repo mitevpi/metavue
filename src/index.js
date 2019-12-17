@@ -13,3 +13,8 @@ export { Imports } from "./api/Imports";
  * @property {Methods}
  */
 export { Methods } from "./api/Methods";
+/**
+ * Description of Util Class.
+ * @property {Util}
+ */
+export { Util } from "./api/Util";

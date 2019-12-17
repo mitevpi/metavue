@@ -3,7 +3,7 @@
 <head>
   <meta charset='utf-8'>
   <title>metavue 0.0.2 | Documentation</title>
-  <meta name='description' content='My JS/NodeJS module'>
+  <meta name='description' content='Utility for extracting data from the relationships between Vue.js components in an application architecture.'>
   <meta name='viewport' content='width=device-width,initial-scale=1'>
   <link href='assets/bass.css' rel='stylesheet'>
   <link href='assets/style.css' rel='stylesheet'>
@@ -83,6 +83,12 @@
                         .VueComponents
                       </a></li>
                     
+                      <li><a
+                        href='#importsvuedata'
+                        class='regular pre-open'>
+                        .VueData
+                      </a></li>
+                    
                     </ul>
                   
                   
@@ -106,9 +112,9 @@
                     <li class='h5'><span>Static members</span></li>
                     
                       <li><a
-                        href='#methodsparsestructure'
+                        href='#methodsarchitecture'
                         class='regular pre-open'>
-                        .ParseStructure
+                        .Architecture
                       </a></li>
                     
                       <li><a
@@ -121,6 +127,12 @@
                         href='#methodsexportparentchild'
                         class='regular pre-open'>
                         .ExportParentChild
+                      </a></li>
+                    
+                      <li><a
+                        href='#methodsexportarchitecture'
+                        class='regular pre-open'>
+                        .ExportArchitecture
                       </a></li>
                     
                     </ul>
@@ -513,6 +525,75 @@ the original import strings will be returned.
       </div>
     </div>
   
+    <div class='border-bottom' id='importsvuedata'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>VueData(fileString)</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+
+  <p>Extract the imported data properties in the parent file.</p>
+
+    <div class='pre p1 fill-light mt0'>VueData(fileString: any): (null | <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&#x3C;<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>>)</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>fileString</span> <code class='quiet'>(any)</code>
+	    The raw text content of the file (.vue).
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code>(null | <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&#x3C;<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>>)</code>:
+        An array of declared data variables in the component.
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
 </div>
 
   
@@ -567,11 +648,11 @@ the original import strings will be returned.
     <div class='py1 quiet mt1 prose-big'>Static Members</div>
     <div class="clearfix">
   
-    <div class='border-bottom' id='methodsparsestructure'>
+    <div class='border-bottom' id='methodsarchitecture'>
       <div class="clearfix small pointer toggle-sibling">
         <div class="py1 contain">
             <a class='icon pin-right py1 dark-link caret-right'>▸</a>
-            <span class='code strong strong truncate'>ParseStructure(directory)</span>
+            <span class='code strong strong truncate'>Architecture(directory)</span>
         </div>
       </div>
       <div class="clearfix display-none toggle-target">
@@ -581,7 +662,7 @@ the original import strings will be returned.
 
   <p>Parse the structure of the Vue application and its components.</p>
 
-    <div class='pre p1 fill-light mt0'>ParseStructure(directory: any): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a>&#x3C;<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&#x3C;<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>>></div>
+    <div class='pre p1 fill-light mt0'>Architecture(directory: any): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a>&#x3C;<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&#x3C;<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>>></div>
   
   
 
@@ -720,6 +801,75 @@ the original import strings will be returned.
   <p>Parse &#x26; export parent-child relationships between components to JSON.</p>
 
     <div class='pre p1 fill-light mt0'>ExportParentChild(directory: any): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">Boolean</a></div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>directory</span> <code class='quiet'>(any)</code>
+	    The directory from which to read .vue files.
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">Boolean</a></code>:
+        True if the file export succeeded, false if there was an error.
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+    <div class='border-bottom' id='methodsexportarchitecture'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>ExportArchitecture(directory)</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+
+  <p>Parse &#x26; export structural relationships between components to JSON.</p>
+
+    <div class='pre p1 fill-light mt0'>ExportArchitecture(directory: any): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">Boolean</a></div>
   
   
 

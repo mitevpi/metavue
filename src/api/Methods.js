@@ -1,8 +1,9 @@
-import * as fs from "fs";
+// import * as fs from "fs";
 import * as path from "path";
 
 import { Files } from "./Files";
 import { Imports } from "./Imports";
+import { Util } from "./Util";
 
 export class Methods {
   /**
@@ -10,7 +11,7 @@ export class Methods {
    * @param directory The directory from which to read .vue files.
    * @returns {Promise<Object[]>} An array of objects containing properties related to the application structure.
    */
-  static async ParseStructure(directory) {
+  static async Architecture(directory) {
     const paths = await Files.GetVue(directory);
     return paths.map(filePath => {
       const text = Files.Read(filePath);
@@ -19,6 +20,7 @@ export class Methods {
         name: filePath.replace(/^.*[\\/]/, "").replace(".vue", ""),
         text,
         imports: Imports.ES6(text),
+        data: Imports.VueData(text),
         components: Imports.VueComponents(text)
       };
     });
@@ -30,7 +32,7 @@ export class Methods {
    * @returns {Promise<[]>} An array of objects with parent & child properties - one for each nested relationship.
    */
   static async ParentChild(directory) {
-    const result = await this.ParseStructure(directory);
+    const result = await this.Architecture(directory);
     const resultArray = [];
     result.map(component => {
       if (component.components) {
@@ -51,12 +53,21 @@ export class Methods {
     const result = await this.ParentChild(directory);
     const data = JSON.stringify(result, null, 4);
     const filePath = path.join(directory, "ParentChildData.json");
-    fs.writeFileSync(filePath, data, err => {
-      if (err) {
-        return false;
-      }
-      console.log("Data written to file");
-      return true;
+    return Util.WriteJson(filePath, data);
+  }
+
+  /**
+   * Parse & export structural relationships between components to JSON.
+   * @param directory The directory from which to read .vue files.
+   * @returns {Boolean} True if the file export succeeded, false if there was an error.
+   */
+  static async ExportArchitecture(directory) {
+    const result = await this.Architecture(directory);
+    result.forEach(v => {
+      delete v.text;
     });
+    const data = JSON.stringify(result, null, 4);
+    const filePath = path.join(directory, "ComponentArchitecture.json");
+    return Util.WriteJson(filePath, data);
   }
 }

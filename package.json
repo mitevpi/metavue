@@ -1,7 +1,7 @@
 {
   "name": "metavue",
   "version": "0.0.2",
-  "description": "My JS/NodeJS module",
+  "description": "Utility for extracting data from the relationships between Vue.js components in an application architecture.",
   "license": "MIT",
   "repository": "mitevpi/metavue",
   "main": "dist/index.js",
@@ -45,11 +45,15 @@
     ]
   },
   "keywords": [
-    "node",
-    "module",
-    "package",
-    "template",
-    "npm"
+    "vue",
+    "vuejs",
+    "meta",
+    "metadata",
+    "relationship",
+    "tree",
+    "architecture",
+    "structure",
+    "component"
   ],
   "dependencies": {},
   "devDependencies": {
