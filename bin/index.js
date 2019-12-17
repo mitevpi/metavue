@@ -44,6 +44,6 @@ dirEntries.map(dirEntry => {
 });
 
 // EXPORT JSON DATA
-metavue.Methods.ExportParentChild(dir);
-metavue.Methods.ExportArchitecture(dir);
+metavue.Exports.ExportParentChild(dir);
+metavue.Exports.ExportArchitecture(dir);
 console.log("Exports Finished", dir);
