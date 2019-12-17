@@ -9,12 +9,17 @@ export { Files } from "./api/Files";
  */
 export { Imports } from "./api/Imports";
 /**
- * Description of Methods Class.
- * @property {Methods}
+ * Description of Exports Class.
+ * @property {Exports}
  */
-export { Methods } from "./api/Methods";
+export { Exports } from "./api/Exports";
 /**
  * Description of Util Class.
  * @property {Util}
  */
 export { Util } from "./api/Util";
+/**
+ * Description of Analysis Class.
+ * @property {Analysis}
+ */
+export { Analysis } from "./api/Analysis";

@@ -1,14 +1,14 @@
-import { Methods } from "../src";
+import { Analysis } from "../src";
 
 // const dir = "/Users/mitevpi/Documents/GitHub/stroll-app";
 const dir = "C:\\Users\\pmitev\\Documents\\GitHub\\view-analysis\\";
 
-test("import Methods", () => {
-  expect.anything(Methods);
+test("import Analysis", () => {
+  expect.anything(Analysis);
 });
 
-test("Methods.Architecture", async () => {
-  const parsed = await Methods.Architecture(dir);
+test("Analysis.Architecture", async () => {
+  const parsed = await Analysis.Architecture(dir);
   const data = [];
   const components = [];
 
@@ -23,22 +23,12 @@ test("Methods.Architecture", async () => {
   expect(components.length).toBeGreaterThan(0);
 });
 
-test("Methods.ParentChild", async () => {
-  const parsed = await Methods.ParentChild(dir);
+test("Analysis.ParentChild", async () => {
+  const parsed = await Analysis.ParentChild(dir);
 
   expect(parsed.length).toBeGreaterThan(0);
   parsed.map(item => {
     expect(item.parent).not.toBeNull();
     expect(item.child).not.toBeNull();
   });
-});
-
-test("Methods.ExportParentChild", async () => {
-  const result = await Methods.ExportParentChild(dir);
-  expect(result).toBeTruthy();
-});
-
-test("Methods.ExportArchitecture", async () => {
-  const result = await Methods.ExportArchitecture(dir);
-  expect(result).toBeTruthy();
 });

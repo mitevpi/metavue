@@ -1,10 +1,7 @@
-import * as path from "path";
-
 import { Files } from "./Files";
 import { Imports } from "./Imports";
-import { Util } from "./Util";
 
-export class Methods {
+export class Analysis {
   /**
    * Parse the structure of the Vue application and its components.
    * @param directory The directory from which to read .vue files.
@@ -41,36 +38,5 @@ export class Methods {
       }
     });
     return resultArray;
-  }
-
-  /**
-   * Parse & export parent-child relationships between components to JSON.
-   * @param directory The directory from which to read .vue files.
-   * @returns {Boolean} True if the file export succeeded, false if there was an error.
-   */
-  static async ExportParentChild(directory) {
-    const result = await this.ParentChild(directory);
-    const data = JSON.stringify(result, null, 4);
-    const filePath = path.join(directory, ".metavue", "ParentChildData.json");
-    return Util.WriteJson(filePath, data);
-  }
-
-  /**
-   * Parse & export structural relationships between components to JSON.
-   * @param directory The directory from which to read .vue files.
-   * @returns {Boolean} True if the file export succeeded, false if there was an error.
-   */
-  static async ExportArchitecture(directory) {
-    const result = await this.Architecture(directory);
-    result.forEach(v => {
-      delete v.text;
-    });
-    const data = JSON.stringify(result, null, 4);
-    const filePath = path.join(
-      directory,
-      ".metavue",
-      "ComponentArchitecture.json"
-    );
-    return Util.WriteJson(filePath, data);
   }
 }
