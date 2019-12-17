@@ -23,6 +23,7 @@
         -   [Parameters][19]
     -   [ExportArchitecture][20]
         -   [Parameters][21]
+-   [Util][22]
 
 ## Files
 
@@ -36,7 +37,7 @@ Get all the Vue files in the input directory (collects files in nested folders t
 
 -   `directory`  The directory to search for .vue files in.
 
-Returns **[Promise][22]&lt;[Array][23]&lt;[String][24]>>** An array of file paths of .vue files.
+Returns **[Promise][23]&lt;[Array][24]&lt;[String][25]>>** An array of file paths of .vue files.
 
 ### Read
 
@@ -46,7 +47,7 @@ Get the raw text data of a file.
 
 -   `filePath`  The path the file is at.
 
-Returns **[string][24]** Raw text content of the file.
+Returns **[string][25]** Raw text content of the file.
 
 ## Imports
 
@@ -60,7 +61,7 @@ Extract the strings used to import modules using ES6 syntax.
 
 -   `fileString`  The raw text content of the file (.vue).
 
-Returns **([Array][23]&lt;[string][24]> | [boolean][25] | any | RegExpMatchArray | [Promise][22]&lt;([Response][26] \| [undefined][27])>)** If any ES6 imports are found,
+Returns **([Array][24]&lt;[string][25]> | [boolean][26] | any | RegExpMatchArray | [Promise][23]&lt;([Response][27] \| [undefined][28])>)** If any ES6 imports are found,
 the original import strings will be returned.
 
 ### VueComponents
@@ -71,7 +72,7 @@ Extract the imported .vue components in the parent file.
 
 -   `fileString`  The raw text content of the file (.vue).
 
-Returns **(null | [Array][23]&lt;[string][24]>)** An array of imported .vue components.
+Returns **(null | [Array][24]&lt;[string][25]>)** An array of imported .vue components.
 
 ### VueData
 
@@ -81,7 +82,7 @@ Extract the imported data properties in the parent file.
 
 -   `fileString`  The raw text content of the file (.vue).
 
-Returns **(null | [Array][23]&lt;[string][24]>)** An array of declared data variables in the component.
+Returns **(null | [Array][24]&lt;[string][25]>)** An array of declared data variables in the component.
 
 ## Methods
 
@@ -95,7 +96,7 @@ Parse the structure of the Vue application and its components.
 
 -   `directory`  The directory from which to read .vue files.
 
-Returns **[Promise][22]&lt;[Array][23]&lt;[Object][28]>>** An array of objects containing properties related to the application structure.
+Returns **[Promise][23]&lt;[Array][24]&lt;[Object][29]>>** An array of objects containing properties related to the application structure.
 
 ### ParentChild
 
@@ -105,7 +106,7 @@ Parse parent-child relationships between components.
 
 -   `directory`  The directory from which to read .vue files.
 
-Returns **[Promise][22]&lt;\[]>** An array of objects with parent & child properties - one for each nested relationship.
+Returns **[Promise][23]&lt;\[]>** An array of objects with parent & child properties - one for each nested relationship.
 
 ### ExportParentChild
 
@@ -115,7 +116,7 @@ Parse & export parent-child relationships between components to JSON.
 
 -   `directory`  The directory from which to read .vue files.
 
-Returns **[Boolean][25]** True if the file export succeeded, false if there was an error.
+Returns **[Boolean][26]** True if the file export succeeded, false if there was an error.
 
 ### ExportArchitecture
 
@@ -125,7 +126,11 @@ Parse & export structural relationships between components to JSON.
 
 -   `directory`  The directory from which to read .vue files.
 
-Returns **[Boolean][25]** True if the file export succeeded, false if there was an error.
+Returns **[Boolean][26]** True if the file export succeeded, false if there was an error.
+
+## Util
+
+Description of Util Class.
 
 [1]: #files
 
@@ -169,16 +174,18 @@ Returns **[Boolean][25]** True if the file export succeeded, false if there was 
 
 [21]: #parameters-8
 
-[22]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise
+[22]: #util
 
-[23]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array
+[23]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise
 
-[24]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String
+[24]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array
 
-[25]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean
+[25]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String
 
-[26]: https://developer.mozilla.org/docs/Web/Guide/HTML/HTML5
+[26]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean
 
-[27]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/undefined
+[27]: https://developer.mozilla.org/docs/Web/Guide/HTML/HTML5
 
-[28]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object
+[28]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/undefined
+
+[29]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object

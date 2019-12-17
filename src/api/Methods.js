@@ -1,4 +1,3 @@
-// import * as fs from "fs";
 import * as path from "path";
 
 import { Files } from "./Files";
@@ -52,7 +51,7 @@ export class Methods {
   static async ExportParentChild(directory) {
     const result = await this.ParentChild(directory);
     const data = JSON.stringify(result, null, 4);
-    const filePath = path.join(directory, "ParentChildData.json");
+    const filePath = path.join(directory, ".metavue", "ParentChildData.json");
     return Util.WriteJson(filePath, data);
   }
 
@@ -67,7 +66,11 @@ export class Methods {
       delete v.text;
     });
     const data = JSON.stringify(result, null, 4);
-    const filePath = path.join(directory, "ComponentArchitecture.json");
+    const filePath = path.join(
+      directory,
+      ".metavue",
+      "ComponentArchitecture.json"
+    );
     return Util.WriteJson(filePath, data);
   }
 }
