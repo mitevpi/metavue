@@ -81,4 +81,10 @@ which can be used to visualize the data.
 },
 ```
 
-![sample network](assets/images/powerbi-parent-child2.png)
+Custom Visualization From Data (PowerBI)
+
+<img src="assets/images/powerbi-parent-child2.png" alt="Vue.js" width="500"/>
+
+Static Site Output (This CLI)
+
+<img src="assets/images/static-site.png" alt="Vue.js" width="800"/>
