@@ -1,7 +1,7 @@
 import { Exports } from "../src";
 
-// const dir = "/Users/mitevpi/Documents/GitHub/stroll-app";
-const dir = "C:\\Users\\pmitev\\Documents\\GitHub\\view-analysis\\";
+const dir = "/Users/mitevpi/Documents/GitHub/stroll-app";
+// const dir = "C:\\Users\\pmitev\\Documents\\GitHub\\view-analysis\\";
 
 test("import Methods", () => {
   expect.anything(Exports);

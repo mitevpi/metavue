@@ -4,6 +4,10 @@ const es6Regex = new RegExp(
 
 // const hugeRegex = new RegExp(/export.default[^;]*/g);
 const vueCompRegex = new RegExp(/components:\s+?[^}]*}/g);
+const vueTemplateRegex = new RegExp(/<template>([\s\S]*)<\/template>/g);
+const vueScriptRegex = new RegExp(/<script>([\s\S]*)<\/script>/g);
+const vueStyleRegex = new RegExp(/<style([\s\S]*)<\/style>/g);
+
 const vueDataMacroRegex = new RegExp(/data:\s+?[^}]*}/g);
 const vueDataMicroRegex = new RegExp(/([a-zA-Z])\w+:/g);
 const vueChunkImportRegex = new RegExp(/(:.+[^>]*>.*import[^)]*[)])/g);
@@ -37,6 +41,48 @@ export class Imports {
       });
     }
     return null;
+  }
+
+  /**
+   * Internal RegEx utility - return just the first RegEx match.
+   * @param matched The match array returned by the RegEx expression.
+   * @returns {null|*} The first matched string, or null (if none).
+   */
+  static ReturnFirstMatch(matched) {
+    if (matched) {
+      return matched[0];
+    }
+    return null;
+  }
+
+  /**
+   * Get the entire string within the <template> tag in the .vue file.
+   * @param fileString The raw text content (string) of the file.
+   * @returns {String} The <template> string from the .vue file.
+   */
+  static VueTemplate(fileString) {
+    const matched = fileString.match(vueTemplateRegex);
+    return this.ReturnFirstMatch(matched);
+  }
+
+  /**
+   * Get the entire string within the <script> tag in the .vue file.
+   * @param fileString The raw text content (string) of the file.
+   * @returns {String} The <script> string from the .vue file.
+   */
+  static VueScript(fileString) {
+    const matched = fileString.match(vueScriptRegex);
+    return this.ReturnFirstMatch(matched);
+  }
+
+  /**
+   * Get the entire string within the <style> tag in the .vue file.
+   * @param fileString The raw text content (string) of the file.
+   * @returns {String} The <style> string from the .vue file.
+   */
+  static VueStyle(fileString) {
+    const matched = fileString.match(vueStyleRegex);
+    return this.ReturnFirstMatch(matched);
   }
 
   /**

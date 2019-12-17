@@ -1,5 +1,6 @@
 import SingleFileComponent from "./SingleFileComponent.js";
 import BarChart from "./BarChart.js";
+import BarChartStacked from "./BarChartStacked.js";
 
 new Vue({
   el: "#app",
@@ -7,8 +8,9 @@ new Vue({
   <div id="app">
   <single-file-component></single-file-component>
   <div v-if="architectureData.length >0">
-    <bar-chart :uniqueComps="uniqueCompsParent" :values="uniqueCompsImportComps" label="# of Child Components"/>
-    <bar-chart :uniqueComps="uniqueCompsAll" :values="uniqueCompsImportEs6" label="# of ES6 Imports"/>
+    <bar-chart-stacked :uniqueComps="uniqueCompsAll" :styleCount="styleCount" :templateCount="templateCount" :scriptCount="scriptCount"/>
+    <bar-chart :uniqueComps="uniqueCompsParent" :values="compImportCount" label="# of Child Components"/>
+    <bar-chart :uniqueComps="uniqueCompsAll" :values="es6ImportCount" label="# of ES6 Imports"/>
     <bar-chart :uniqueComps="uniqueCompsAll" :values="uniqueCompsData" label="# Data Properties"/>
 </div>
 
@@ -16,7 +18,8 @@ new Vue({
   `,
   components: {
     SingleFileComponent,
-    BarChart
+    BarChart,
+    BarChartStacked
   },
   data: {
     seen: true,
@@ -52,7 +55,7 @@ new Vue({
         return this.architectureData.filter(s => s.name === c)[0];
       });
     },
-    uniqueCompsImportComps() {
+    compImportCount() {
       return this.uniqueCompsDataParent.map(c => {
         return c.components.length || 0;
       });
@@ -60,13 +63,26 @@ new Vue({
     uniqueCompsData() {
       return this.uniqueCompsDataAll.map(c => {
         return c.data === null ? 0 : c.data.length;
-        // return c.components.length || 0;
       });
     },
-    uniqueCompsImportEs6() {
+    es6ImportCount() {
       return this.uniqueCompsDataAll.map(c => {
         return c.imports === null ? 0 : c.imports.length;
-        // return c.components.length || 0;
+      });
+    },
+    templateCount() {
+      return this.uniqueCompsDataAll.map(c => {
+        return c.templateLength;
+      });
+    },
+    scriptCount() {
+      return this.uniqueCompsDataAll.map(c => {
+        return c.scriptLength;
+      });
+    },
+    styleCount() {
+      return this.uniqueCompsDataAll.map(c => {
+        return c.styleLength;
       });
     }
   },

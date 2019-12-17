@@ -1,7 +1,7 @@
 import { Files } from "../src";
 
-// const dir = "/Users/mitevpi/Documents/GitHub/stroll-app";
-const dir = "C:\\Users\\pmitev\\Documents\\GitHub\\stroll-app\\";
+const dir = "/Users/mitevpi/Documents/GitHub/stroll-app";
+// const dir = "C:\\Users\\pmitev\\Documents\\GitHub\\stroll-app\\";
 
 test("import Files", () => {
   expect.anything(Files);

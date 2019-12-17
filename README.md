@@ -4,7 +4,7 @@
 [![Generic badge](https://img.shields.io/badge/Docs-MD-Green.svg)](docs)
 
 [![npm](https://img.shields.io/npm/v/metavue.svg)](https://www.npmjs.com/package/metavue)
-[![npm bundle size](https://img.shields.io/bundlephobia/min/metavue.svg)](https://bundlephobia.com/result?p=@metavue)
+[![npm bundle size](https://img.shields.io/bundlephobia/min/metavue.svg)](https://bundlephobia.com/result?p=metavue)
 [![npm](https://img.shields.io/npm/dw/metavue.svg)](https://www.npmjs.com/package/metavue)
 [![npm2](https://img.shields.io/npm/dt/metavue.svg)](https://www.npmjs.com/package/metavue)
 
@@ -83,8 +83,9 @@ which can be used to visualize the data.
 
 Custom Visualization From Data (PowerBI)
 
-<img src="assets/images/powerbi-parent-child2.png" alt="Vue.js" width="500"/>
+<img src="assets/images/powerbi-parent-child2.png" alt="Vue.js" width="800"/>
 
 Static Site Output (This CLI)
 
+<img src="assets/images/composition.png" alt="Vue.js" width="800"/>
 <img src="assets/images/static-site.png" alt="Vue.js" width="800"/>

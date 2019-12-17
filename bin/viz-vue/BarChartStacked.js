@@ -4,7 +4,7 @@ export default {
     <canvas ref="myChart"></canvas>
   </div>
   `,
-  props: ['uniqueComps', 'values', 'label'],
+  props: ['uniqueComps', "styleCount", "templateCount", "scriptCount"],
   data() {
     return {
       message: "Sample"
@@ -22,24 +22,34 @@ export default {
           labels: this.uniqueComps,
           datasets: [
             {
-              label: this.label,
-              data: this.values,
-              backgroundColor: "rgba(255, 99, 132, 0.2)",
-              borderColor: "rgba(255, 99, 132, 1)",
-              borderWidth: 1
+              label: 'Style',
+              data: this.styleCount,
+              backgroundColor: '#D6E9C6' // green
+            },
+            {
+              label: 'Template',
+              data: this.templateCount,
+              backgroundColor: '#FAEBCC' // yellow
+            },
+            {
+              label: 'Script',
+              data: this.scriptCount,
+              backgroundColor: '#EBCCD1' // red
             }
           ]
         },
         options: {
           title: {
             display: true,
-            text: this.label
+            text: 'Component Composition'
           },
           responsive: true,
           maintainAspectRatio: false,
           scales: {
+            xAxes: [{ stacked: true }],
             yAxes: [
               {
+                stacked: true,
                 ticks: {
                   beginAtZero: true
                 }

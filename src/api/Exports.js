@@ -25,6 +25,9 @@ export class Exports {
     const result = await Analysis.Architecture(directory);
     result.forEach(v => {
       delete v.text;
+      delete v.template;
+      delete v.script;
+      delete v.style;
     });
     const data = JSON.stringify(result, null, 4);
     const filePath = path.join(

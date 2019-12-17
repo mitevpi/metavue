@@ -1,5 +1,6 @@
 import { Files } from "./Files";
 import { Imports } from "./Imports";
+import { Util } from "./Util";
 
 export class Analysis {
   /**
@@ -11,13 +12,23 @@ export class Analysis {
     const paths = await Files.GetVue(directory);
     return paths.map(filePath => {
       const text = Files.Read(filePath);
+      const template = Imports.VueTemplate(text);
+      const script = Imports.VueScript(text);
+      const style = Imports.VueStyle(text);
       return {
         path: filePath,
         name: filePath.replace(/^.*[\\/]/, "").replace(".vue", ""),
         text,
+        lines: Util.GetLineLength(text),
         imports: Imports.ES6(text),
         data: Imports.VueData(text),
-        components: Imports.VueComponents(text)
+        components: Imports.VueComponents(text),
+        template,
+        script,
+        style,
+        templateLength: Util.GetLineLength(template),
+        scriptLength: Util.GetLineLength(script),
+        styleLength: Util.GetLineLength(style)
       };
     });
   }

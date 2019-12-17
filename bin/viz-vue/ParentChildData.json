@@ -9,6 +9,10 @@
     },
     {
         "parent": "App",
+        "child": "LogIn"
+    },
+    {
+        "parent": "App",
         "child": "Results"
     },
     {
@@ -30,6 +34,10 @@
     {
         "parent": "Results",
         "child": "UIResultsCard"
+    },
+    {
+        "parent": "DeprecatedMobileUIControls",
+        "child": "UIFilterModal"
     },
     {
         "parent": "UIControls",
