@@ -1,6 +1,6 @@
 {
   "name": "metavue",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Utility for extracting metadata between of Vue.js components in application architecture.",
   "license": "MIT",
   "repository": "mitevpi/metavue",
@@ -21,13 +21,13 @@
     "test": "jest",
     "coverage": "npm test -- --coverage",
     "postcoverage": "open-cli coverage/lcov-report/index.html",
-    "lint": "eslint .",
+    "lint": "eslint . --fix",
     "docs": "documentation build src/index.js -f md -o docs/README.md && documentation build src/** -f html -o docs",
     "postdocs": "",
     "clean": "rimraf dist",
     "prebuild": "npm run clean",
     "build": "babel src -d dist",
-    "prerelease": "npm run lint && npm test && npm run build",
+    "prerelease": "npm run lint && npm test & npm run build",
     "release": "standard-version",
     "postpublish": "git push origin master --follow-tags"
   },
