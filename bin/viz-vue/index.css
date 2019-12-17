@@ -1,0 +1,14 @@
+html, body {
+  margin: 5px;
+  padding: 0;
+}
+.chart-container {
+  width: 1000px;
+  height:600px
+}
+
+#app {
+  font-family: "Open Sans", Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}

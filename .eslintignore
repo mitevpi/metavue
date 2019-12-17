@@ -6,4 +6,5 @@ samples
 wip
 dist
 bin/script.js
-bin/viz/script.js
+bin/viz
+bin/viz-vue

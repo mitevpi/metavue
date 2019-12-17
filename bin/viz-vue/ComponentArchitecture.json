@@ -1,0 +1,195 @@
+[
+    {
+        "path": "C:\\Users\\pmitev\\Documents\\GitHub\\stroll-app\\src\\App.vue",
+        "name": "App",
+        "imports": null,
+        "data": null,
+        "components": [
+            "Footer",
+            "Header",
+            "Results",
+            "About",
+            "UserInterface",
+            "Splash"
+        ]
+    },
+    {
+        "path": "C:\\Users\\pmitev\\Documents\\GitHub\\stroll-app\\src\\components\\About.vue",
+        "name": "About",
+        "imports": null,
+        "data": null,
+        "components": null
+    },
+    {
+        "path": "C:\\Users\\pmitev\\Documents\\GitHub\\stroll-app\\src\\components\\Footer.vue",
+        "name": "Footer",
+        "imports": null,
+        "data": null,
+        "components": null
+    },
+    {
+        "path": "C:\\Users\\pmitev\\Documents\\GitHub\\stroll-app\\src\\components\\Header.vue",
+        "name": "Header",
+        "imports": null,
+        "data": null,
+        "components": [
+            "UIMenu"
+        ]
+    },
+    {
+        "path": "C:\\Users\\pmitev\\Documents\\GitHub\\stroll-app\\src\\components\\Results.vue",
+        "name": "Results",
+        "imports": null,
+        "data": [
+            "data",
+            "selectMobile",
+            "isMobile",
+            "roundAmount",
+            "currentPage"
+        ],
+        "components": [
+            "UIResultsCard"
+        ]
+    },
+    {
+        "path": "C:\\Users\\pmitev\\Documents\\GitHub\\stroll-app\\src\\components\\Splash.vue",
+        "name": "Splash",
+        "imports": null,
+        "data": null,
+        "components": null
+    },
+    {
+        "path": "C:\\Users\\pmitev\\Documents\\GitHub\\stroll-app\\src\\components\\UI\\UIControls.vue",
+        "name": "UIControls",
+        "imports": [
+            "import axios from \"axios\";"
+        ],
+        "data": [
+            "data",
+            "error",
+            "loadingDialog",
+            "location",
+            "locationMode",
+            "locationPrompt",
+            "methodTypes",
+            "selectedMethod",
+            "paths",
+            "latitude",
+            "longitude",
+            "accuracy",
+            "scoreSlider",
+            "filterBy"
+        ],
+        "components": [
+            "UIFilterModal"
+        ]
+    },
+    {
+        "path": "C:\\Users\\pmitev\\Documents\\GitHub\\stroll-app\\src\\components\\UI\\UIError.vue",
+        "name": "UIError",
+        "imports": null,
+        "data": [
+            "data",
+            "addressError"
+        ],
+        "components": null
+    },
+    {
+        "path": "C:\\Users\\pmitev\\Documents\\GitHub\\stroll-app\\src\\components\\UI\\UIFilterModal.vue",
+        "name": "UIFilterModal",
+        "imports": null,
+        "data": [
+            "data",
+            "options",
+            "text",
+            "value"
+        ],
+        "components": null
+    },
+    {
+        "path": "C:\\Users\\pmitev\\Documents\\GitHub\\stroll-app\\src\\components\\UI\\UILoading.vue",
+        "name": "UILoading",
+        "imports": null,
+        "data": null,
+        "components": null
+    },
+    {
+        "path": "C:\\Users\\pmitev\\Documents\\GitHub\\stroll-app\\src\\components\\UI\\UIMap.vue",
+        "name": "UIMap",
+        "imports": [
+            "import mapStyle from \"../../assets/mapStyle.json\";"
+        ],
+        "data": null,
+        "components": null
+    },
+    {
+        "path": "C:\\Users\\pmitev\\Documents\\GitHub\\stroll-app\\src\\components\\UI\\UIMenu.vue",
+        "name": "UIMenu",
+        "imports": null,
+        "data": [
+            "data",
+            "links",
+            "text",
+            "toggle"
+        ],
+        "components": null
+    },
+    {
+        "path": "C:\\Users\\pmitev\\Documents\\GitHub\\stroll-app\\src\\components\\UI\\UIRadarChart.vue",
+        "name": "UIRadarChart",
+        "imports": [
+            "import Chart from \"chart.js\";"
+        ],
+        "data": [
+            "data",
+            "borderColor",
+            "backgroundColor",
+            "pointBorderColor",
+            "pointBackgroundColor",
+            "pointHoverBackgroundColor",
+            "pointHoverBorderColor",
+            "fill"
+        ],
+        "components": null
+    },
+    {
+        "path": "C:\\Users\\pmitev\\Documents\\GitHub\\stroll-app\\src\\components\\UI\\UIResultsCard.vue",
+        "name": "UIResultsCard",
+        "imports": null,
+        "data": null,
+        "components": [
+            "UIRadarChart",
+            "UIScore",
+            "UIMap"
+        ]
+    },
+    {
+        "path": "C:\\Users\\pmitev\\Documents\\GitHub\\stroll-app\\src\\components\\UI\\UIScore.vue",
+        "name": "UIScore",
+        "imports": null,
+        "data": [
+            "data",
+            "shownParkScore",
+            "shownGreenScore"
+        ],
+        "components": null
+    },
+    {
+        "path": "C:\\Users\\pmitev\\Documents\\GitHub\\stroll-app\\src\\components\\UI\\UIScoreHeader.vue",
+        "name": "UIScoreHeader",
+        "imports": null,
+        "data": null,
+        "components": null
+    },
+    {
+        "path": "C:\\Users\\pmitev\\Documents\\GitHub\\stroll-app\\src\\components\\UserInterface.vue",
+        "name": "UserInterface",
+        "imports": null,
+        "data": null,
+        "components": [
+            "UIControls",
+            "UIError",
+            "UILoading"
+        ]
+    }
+]
