@@ -3,17 +3,19 @@ import * as path from "path";
 
 export class Util {
   static WriteJson(filePath, data) {
-    const dir = path.dirname(filePath);
-    if (!fs.existsSync(dir)) {
-      fs.mkdirSync(dir);
-    }
-
-    fs.writeFileSync(filePath, data, err => {
-      if (err) {
-        return false;
+    return new Promise((resolve, reject) => {
+      const dir = path.dirname(filePath);
+      if (!fs.existsSync(dir)) {
+        fs.mkdirSync(dir);
       }
-      console.log("FILE EXPORTED", filePath);
-      return true;
+
+      fs.writeFile(filePath, data, err => {
+        if (err) {
+          reject(err);
+        }
+        console.log("FILE EXPORTED", filePath);
+        resolve(true);
+      });
     });
   }
 }
