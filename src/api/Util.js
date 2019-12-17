@@ -6,6 +6,7 @@ export class Util {
       if (err) {
         return false;
       }
+      console.log("FILE EXPORTED", filePath);
       return true;
     });
   }

@@ -1,10 +1,10 @@
 {
   "name": "metavue",
   "version": "0.0.2",
-  "description": "Utility for extracting data from the relationships between Vue.js components in an application architecture.",
+  "description": "Utility for extracting metadata between of Vue.js components in application architecture.",
   "license": "MIT",
   "repository": "mitevpi/metavue",
-  "main": "dist/index.js",
+  "main": "bin/index.js",
   "author": {
     "name": "Petr Mitev",
     "email": "p.mitevpi@gmail.com",
@@ -13,6 +13,7 @@
   "files": [
     "dist",
     "src",
+    "bin",
     "README.md",
     "samples"
   ],
@@ -29,6 +30,9 @@
     "prerelease": "npm run lint && npm test && npm run build",
     "release": "standard-version",
     "postpublish": "git push origin master --follow-tags"
+  },
+  "bin": {
+    "metavue": "./bin/index.js"
   },
   "husky": {
     "hooks": {
@@ -55,7 +59,9 @@
     "structure",
     "component"
   ],
-  "dependencies": {},
+  "dependencies": {
+    "yargs": "15.0.2"
+  },
   "devDependencies": {
     "@babel/cli": "7.7.5",
     "@babel/core": "7.7.5",
