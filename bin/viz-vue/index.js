@@ -22,42 +22,46 @@ const app = new Vue({
       })
     }
   },
+  methods:{
+    CreateComponentImportBar(){
+      const ctx = document.getElementById("myChart").getContext("2d");
+      const myChart = new Chart(ctx, {
+        type: "bar",
+        data: {
+          labels: this.uniqueComps,
+          datasets: [
+            {
+              label: "# of Child Components",
+              data: this.uniqueCompsImportComps,
+              backgroundColor: "rgba(255, 99, 132, 0.2)",
+              borderColor: "rgba(255, 99, 132, 1)",
+              borderWidth: 1
+            }
+          ]
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          scales: {
+            yAxes: [
+              {
+                ticks: {
+                  beginAtZero: true
+                }
+              }
+            ]
+          }
+        }
+      });
+    }
+  },
   mounted() {
 
     $.getJSON('ParentChildData.json', data => {
       this.parentChildData = data;
       $.getJSON('ComponentArchitecture.json', archData => {
         this.architectureData = archData;
-
-        const ctx = document.getElementById("myChart").getContext("2d");
-        const myChart = new Chart(ctx, {
-          type: "bar",
-          data: {
-            labels: this.uniqueComps,
-            datasets: [
-              {
-                label: "# of Child Components",
-                data: this.uniqueCompsImportComps,
-                backgroundColor: "rgba(255, 99, 132, 0.2)",
-                borderColor: "rgba(255, 99, 132, 1)",
-                borderWidth: 1
-              }
-            ]
-          },
-          options: {
-            responsive: true,
-            maintainAspectRatio: false,
-            scales: {
-              yAxes: [
-                {
-                  ticks: {
-                    beginAtZero: true
-                  }
-                }
-              ]
-            }
-          }
-        });
+        this.CreateComponentImportBar();
       });
     });
   }

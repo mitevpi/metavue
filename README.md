@@ -37,8 +37,9 @@ metavue -d PATH_TO_YOUR_VUE_APP
 ### Output
 
 The CLI utility will generate a folder called `.metavue` in the root
-directory of the Vue application with `.json` files containing
-the metadata of your Vue application.
+directory of the Vue application with `.json` files containing the
+metadata of your Vue application, and a static site at `index.html`
+which can be used to visualize the data.
 
 #### Sample
 

@@ -1,8 +1,12 @@
 #!/usr/bin/env node
 
+const fs = require("fs");
+const path = require("path");
+
 const yargs = require("yargs");
 const metavue = require("../dist/index");
 
+// SET UP CLI FUNCTIONALITY
 const options = yargs
   .version()
   .example(
@@ -23,7 +27,23 @@ const options = yargs
   ).argv;
 
 const dir = options.directory;
+const vizDir = path.resolve(__dirname, "viz-vue");
 
+// COPY VISUALIZATION FILES
+const dirEntries = fs.readdirSync(vizDir, { withFileTypes: true });
+dirEntries.map(dirEntry => {
+  const res = path.resolve(vizDir, dirEntry.name);
+
+  if (!res.endsWith(".json")) {
+    const destinationPath = path.join(dir, ".metavue", path.basename(res));
+    fs.copyFile(res, destinationPath, err => {
+      if (err) throw err;
+      // console.log("Copied Visualization", destinationPath);
+    });
+  }
+});
+
+// EXPORT JSON DATA
 metavue.Methods.ExportParentChild(dir);
 metavue.Methods.ExportArchitecture(dir);
 console.log("Exports Finished", dir);
