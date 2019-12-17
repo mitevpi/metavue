@@ -1,7 +1,7 @@
 {
   "name": "metavue",
-  "version": "0.1.1",
-  "description": "Utility for extracting metadata between of Vue.js components in application architecture.",
+  "version": "0.1.2",
+  "description": "Utility for extracting metadata from Vue.js applications & components related to code style and architecture.",
   "license": "MIT",
   "repository": "mitevpi/metavue",
   "main": "bin/index.js",
