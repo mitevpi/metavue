@@ -28,6 +28,7 @@ export class Exports {
       delete v.template;
       delete v.script;
       delete v.style;
+      delete v.comments;
     });
     const data = JSON.stringify(result, null, 4);
     const filePath = path.join(

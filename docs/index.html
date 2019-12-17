@@ -3,7 +3,7 @@
 <head>
   <meta charset='utf-8'>
   <title>metavue 0.1.1 | Documentation</title>
-  <meta name='description' content='Utility for extracting metadata between of Vue.js components in application architecture.'>
+  <meta name='description' content='Utility for extracting metadata from Vue.js applications &amp; components related to code style and architecture.'>
   <meta name='viewport' content='width=device-width,initial-scale=1'>
   <link href='assets/bass.css' rel='stylesheet'>
   <link href='assets/style.css' rel='stylesheet'>
@@ -128,9 +128,29 @@
               
                 
                 <li><a
-                  href='#imports'
+                  href='#classes'
+                  class="">
+                  Classes
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#idselectors'
+                  class="">
+                  IdSelectors
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#metadataes6'
                   class=" toggle-sibling">
-                  Imports
+                  MetaDataES6
                   <span class='icon'>▸</span>
                 </a>
                 
@@ -140,43 +160,65 @@
                     <li class='h5'><span>Static members</span></li>
                     
                       <li><a
-                        href='#importses6'
+                        href='#metadataes6comments'
+                        class='regular pre-open'>
+                        .Comments
+                      </a></li>
+                    
+                    </ul>
+                  
+                  
+                  
+                  
+                </div>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#metadatavue'
+                  class=" toggle-sibling">
+                  MetaDataVue
+                  <span class='icon'>▸</span>
+                </a>
+                
+                <div class='toggle-target display-none'>
+                  
+                  <ul class='list-reset py1-ul pl1'>
+                    <li class='h5'><span>Static members</span></li>
+                    
+                      <li><a
+                        href='#metadatavuees6'
                         class='regular pre-open'>
                         .ES6
                       </a></li>
                     
                       <li><a
-                        href='#importsvuecomponents'
+                        href='#metadatavuevuecomponents'
                         class='regular pre-open'>
                         .VueComponents
                       </a></li>
                     
                       <li><a
-                        href='#importsreturnfirstmatch'
-                        class='regular pre-open'>
-                        .ReturnFirstMatch
-                      </a></li>
-                    
-                      <li><a
-                        href='#importsvuetemplate'
+                        href='#metadatavuevuetemplate'
                         class='regular pre-open'>
                         .VueTemplate
                       </a></li>
                     
                       <li><a
-                        href='#importsvuescript'
+                        href='#metadatavuevuescript'
                         class='regular pre-open'>
                         .VueScript
                       </a></li>
                     
                       <li><a
-                        href='#importsvuestyle'
+                        href='#metadatavuevuestyle'
                         class='regular pre-open'>
                         .VueStyle
                       </a></li>
                     
                       <li><a
-                        href='#importsvuedata'
+                        href='#metadatavuevuedata'
                         class='regular pre-open'>
                         .VueData
                       </a></li>
@@ -207,6 +249,12 @@
                         href='#utilwritejson'
                         class='regular pre-open'>
                         .WriteJson
+                      </a></li>
+                    
+                      <li><a
+                        href='#utilreturnfirstmatch'
+                        class='regular pre-open'>
+                        .ReturnFirstMatch
                       </a></li>
                     
                       <li><a
@@ -815,17 +863,157 @@
   
   <div class='clearfix'>
     
-    <h3 class='fl m0' id='imports'>
-      Imports
+    <h3 class='fl m0' id='classes'>
+      Classes
     </h3>
     
     
   </div>
   
 
-  <p>Description of Imports Class.</p>
+  <p>Get the css classes in the the .vue file.</p>
 
-    <div class='pre p1 fill-light mt0'>Imports</div>
+    <div class='pre p1 fill-light mt0'>Classes(fileString: any): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&#x3C;<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>></div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>fileString</span> <code class='quiet'>(any)</code>
+	    The raw text content (string) of the file.
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&#x3C;<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>></code>:
+        An array of css classes strings from the .vue file.
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='idselectors'>
+      IdSelectors
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Get the css id selectors in the the .vue file.</p>
+
+    <div class='pre p1 fill-light mt0'>IdSelectors(fileString: any): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&#x3C;<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>></div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>fileString</span> <code class='quiet'>(any)</code>
+	    The raw text content (string) of the file.
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&#x3C;<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>></code>:
+        An array of css id selector strings from the .vue file.
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='metadataes6'>
+      MetaDataES6
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Description of MetaDataES6 Class.</p>
+
+    <div class='pre p1 fill-light mt0'>MetaDataES6</div>
   
   
 
@@ -850,7 +1038,130 @@
     <div class='py1 quiet mt1 prose-big'>Static Members</div>
     <div class="clearfix">
   
-    <div class='border-bottom' id='importses6'>
+    <div class='border-bottom' id='metadataes6comments'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>Comments(fileString)</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+
+  <p>Get the comment tags in the the .vue file.</p>
+
+    <div class='pre p1 fill-light mt0'>Comments(fileString: any): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&#x3C;<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>></div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>fileString</span> <code class='quiet'>(any)</code>
+	    The raw text content (string) of the file.
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&#x3C;<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>></code>:
+        An array of comment strings from the .vue file.
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+</div>
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='metadatavue'>
+      MetaDataVue
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Description of MetaDataVue Class.</p>
+
+    <div class='pre p1 fill-light mt0'>MetaDataVue</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Static Members</div>
+    <div class="clearfix">
+  
+    <div class='border-bottom' id='metadatavuees6'>
       <div class="clearfix small pointer toggle-sibling">
         <div class="py1 contain">
             <a class='icon pin-right py1 dark-link caret-right'>▸</a>
@@ -920,7 +1231,7 @@ the original import strings will be returned.
       </div>
     </div>
   
-    <div class='border-bottom' id='importsvuecomponents'>
+    <div class='border-bottom' id='metadatavuevuecomponents'>
       <div class="clearfix small pointer toggle-sibling">
         <div class="py1 contain">
             <a class='icon pin-right py1 dark-link caret-right'>▸</a>
@@ -989,76 +1300,7 @@ the original import strings will be returned.
       </div>
     </div>
   
-    <div class='border-bottom' id='importsreturnfirstmatch'>
-      <div class="clearfix small pointer toggle-sibling">
-        <div class="py1 contain">
-            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
-            <span class='code strong strong truncate'>ReturnFirstMatch(matched)</span>
-        </div>
-      </div>
-      <div class="clearfix display-none toggle-target">
-        <section class='p2 mb2 clearfix bg-white minishadow'>
-
-  
-
-  <p>Internal RegEx utility - return just the first RegEx match.</p>
-
-    <div class='pre p1 fill-light mt0'>ReturnFirstMatch(matched: any): (null | any)</div>
-  
-  
-
-  
-  
-  
-  
-  
-  
-
-  
-    <div class='py1 quiet mt1 prose-big'>Parameters</div>
-    <div class='prose'>
-      
-        <div class='space-bottom0'>
-          <div>
-            <span class='code bold'>matched</span> <code class='quiet'>(any)</code>
-	    The match array returned by the RegEx expression.
-
-          </div>
-          
-        </div>
-      
-    </div>
-  
-
-  
-
-  
-    
-      <div class='py1 quiet mt1 prose-big'>Returns</div>
-      <code>(null | any)</code>:
-        The first matched string, or null (if none).
-
-      
-    
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-</section>
-
-      </div>
-    </div>
-  
-    <div class='border-bottom' id='importsvuetemplate'>
+    <div class='border-bottom' id='metadatavuevuetemplate'>
       <div class="clearfix small pointer toggle-sibling">
         <div class="py1 contain">
             <a class='icon pin-right py1 dark-link caret-right'>▸</a>
@@ -1129,7 +1371,7 @@ the original import strings will be returned.
       </div>
     </div>
   
-    <div class='border-bottom' id='importsvuescript'>
+    <div class='border-bottom' id='metadatavuevuescript'>
       <div class="clearfix small pointer toggle-sibling">
         <div class="py1 contain">
             <a class='icon pin-right py1 dark-link caret-right'>▸</a>
@@ -1200,7 +1442,7 @@ the original import strings will be returned.
       </div>
     </div>
   
-    <div class='border-bottom' id='importsvuestyle'>
+    <div class='border-bottom' id='metadatavuevuestyle'>
       <div class="clearfix small pointer toggle-sibling">
         <div class="py1 contain">
             <a class='icon pin-right py1 dark-link caret-right'>▸</a>
@@ -1271,7 +1513,7 @@ the original import strings will be returned.
       </div>
     </div>
   
-    <div class='border-bottom' id='importsvuedata'>
+    <div class='border-bottom' id='metadatavuevuedata'>
       <div class="clearfix small pointer toggle-sibling">
         <div class="py1 contain">
             <a class='icon pin-right py1 dark-link caret-right'>▸</a>
@@ -1451,6 +1693,75 @@ the original import strings will be returned.
       <div class='py1 quiet mt1 prose-big'>Returns</div>
       <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a>&#x3C;<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">Boolean</a>></code>:
         True if file export completes successfully.
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+    <div class='border-bottom' id='utilreturnfirstmatch'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>ReturnFirstMatch(matched)</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+
+  <p>Internal RegEx utility - return just the first RegEx match.</p>
+
+    <div class='pre p1 fill-light mt0'>ReturnFirstMatch(matched: any): (null | any)</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>matched</span> <code class='quiet'>(any)</code>
+	    The match array returned by the RegEx expression.
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code>(null | any)</code>:
+        The first matched string, or null (if none).
 
       
     

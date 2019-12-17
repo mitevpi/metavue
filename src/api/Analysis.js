@@ -1,5 +1,7 @@
 import { Files } from "./Files";
-import { Imports } from "./Imports";
+import { MetaDataVue } from "./MetaDataVue";
+import { MetaDataES6 } from "./MetaDataES6";
+import { MetaDataCSS } from "./MetaDataCSS";
 import { Util } from "./Util";
 
 export class Analysis {
@@ -12,23 +14,34 @@ export class Analysis {
     const paths = await Files.GetVue(directory);
     return paths.map(filePath => {
       const text = Files.Read(filePath);
-      const template = Imports.VueTemplate(text);
-      const script = Imports.VueScript(text);
-      const style = Imports.VueStyle(text);
+      const data = MetaDataVue.VueData(text);
+      const template = MetaDataVue.VueTemplate(text);
+      const script = MetaDataVue.VueScript(text);
+      const style = MetaDataVue.VueStyle(text);
+      const comments = MetaDataES6.Comments(text);
+      const cssClasses = MetaDataCSS.Classes(style);
+      const cssIdSelectors = MetaDataCSS.IdSelectors(style);
       return {
         path: filePath,
         name: filePath.replace(/^.*[\\/]/, "").replace(".vue", ""),
         text,
         lines: Util.GetLineLength(text),
-        imports: Imports.ES6(text),
-        data: Imports.VueData(text),
-        components: Imports.VueComponents(text),
+        imports: MetaDataVue.ES6(text),
+        data,
+        dataCount: data.length,
+        components: MetaDataVue.VueComponents(text),
         template,
         script,
         style,
+        comments,
+        cssClasses,
+        cssIdSelectors,
         templateLength: Util.GetLineLength(template),
         scriptLength: Util.GetLineLength(script),
-        styleLength: Util.GetLineLength(style)
+        styleLength: Util.GetLineLength(style),
+        commentLength: comments.length,
+        cssClassesCount: cssClasses.length,
+        cssIdSelectorsCount: cssIdSelectors.length
       };
     });
   }

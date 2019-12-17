@@ -1,3 +1,5 @@
+import { Util } from "./Util";
+
 const es6Regex = new RegExp(
   /import(?:["'\s]*([\w*{}\n\r\t, ]+)from\s*)?["'\s].*([@\w/_-]+)["'\s].*/g
 );
@@ -12,7 +14,7 @@ const vueDataMacroRegex = new RegExp(/data:\s+?[^}]*}/g);
 const vueDataMicroRegex = new RegExp(/([a-zA-Z])\w+:/g);
 const vueChunkImportRegex = new RegExp(/(:.+[^>]*>.*import[^)]*[)])/g);
 
-export class Imports {
+export class MetaDataVue {
   /**
    * Extract the strings used to import modules using ES6 syntax.
    * @param fileString The raw text content of the file (.vue).
@@ -44,25 +46,13 @@ export class Imports {
   }
 
   /**
-   * Internal RegEx utility - return just the first RegEx match.
-   * @param matched The match array returned by the RegEx expression.
-   * @returns {null|*} The first matched string, or null (if none).
-   */
-  static ReturnFirstMatch(matched) {
-    if (matched) {
-      return matched[0];
-    }
-    return null;
-  }
-
-  /**
    * Get the entire string within the <template> tag in the .vue file.
    * @param fileString The raw text content (string) of the file.
    * @returns {String} The <template> string from the .vue file.
    */
   static VueTemplate(fileString) {
     const matched = fileString.match(vueTemplateRegex);
-    return this.ReturnFirstMatch(matched);
+    return Util.ReturnFirstMatch(matched);
   }
 
   /**
@@ -72,7 +62,7 @@ export class Imports {
    */
   static VueScript(fileString) {
     const matched = fileString.match(vueScriptRegex);
-    return this.ReturnFirstMatch(matched);
+    return Util.ReturnFirstMatch(matched);
   }
 
   /**
@@ -82,7 +72,7 @@ export class Imports {
    */
   static VueStyle(fileString) {
     const matched = fileString.match(vueStyleRegex);
-    return this.ReturnFirstMatch(matched);
+    return Util.ReturnFirstMatch(matched);
   }
 
   /**
@@ -99,6 +89,6 @@ export class Imports {
       });
       return [...new Set(matched)];
     }
-    return null;
+    return [];
   }
 }

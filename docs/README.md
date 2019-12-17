@@ -7,28 +7,28 @@
         -   [Parameters][3]
     -   [Read][4]
         -   [Parameters][5]
--   [Imports][6]
+-   [MetaDataVue][6]
     -   [ES6][7]
         -   [Parameters][8]
     -   [VueComponents][9]
         -   [Parameters][10]
-    -   [ReturnFirstMatch][11]
+    -   [VueTemplate][11]
         -   [Parameters][12]
-    -   [VueTemplate][13]
+    -   [VueScript][13]
         -   [Parameters][14]
-    -   [VueScript][15]
+    -   [VueStyle][15]
         -   [Parameters][16]
-    -   [VueStyle][17]
+    -   [VueData][17]
         -   [Parameters][18]
-    -   [VueData][19]
-        -   [Parameters][20]
--   [Exports][21]
-    -   [ExportParentChild][22]
+-   [Exports][19]
+    -   [ExportParentChild][20]
+        -   [Parameters][21]
+    -   [ExportArchitecture][22]
         -   [Parameters][23]
-    -   [ExportArchitecture][24]
-        -   [Parameters][25]
--   [Util][26]
-    -   [WriteJson][27]
+-   [Util][24]
+    -   [WriteJson][25]
+        -   [Parameters][26]
+    -   [ReturnFirstMatch][27]
         -   [Parameters][28]
     -   [GetLineLength][29]
         -   [Parameters][30]
@@ -37,6 +37,13 @@
         -   [Parameters][33]
     -   [ParentChild][34]
         -   [Parameters][35]
+-   [MetaDataES6][36]
+    -   [Comments][37]
+        -   [Parameters][38]
+-   [Classes][39]
+    -   [Parameters][40]
+-   [IdSelectors][41]
+    -   [Parameters][42]
 
 ## Files
 
@@ -50,7 +57,7 @@ Get all the Vue files in the input directory (collects files in nested folders t
 
 -   `directory`  The directory to search for .vue files in.
 
-Returns **[Promise][36]&lt;[Array][37]&lt;[String][38]>>** An array of file paths of .vue files.
+Returns **[Promise][43]&lt;[Array][44]&lt;[String][45]>>** An array of file paths of .vue files.
 
 ### Read
 
@@ -60,11 +67,11 @@ Get the raw text data of a file.
 
 -   `filePath`  The path the file is at.
 
-Returns **[string][38]** Raw text content of the file.
+Returns **[string][45]** Raw text content of the file.
 
-## Imports
+## MetaDataVue
 
-Description of Imports Class.
+Description of MetaDataVue Class.
 
 ### ES6
 
@@ -74,7 +81,7 @@ Extract the strings used to import modules using ES6 syntax.
 
 -   `fileString`  The raw text content of the file (.vue).
 
-Returns **([Array][37]&lt;[string][38]> | [boolean][39] | any | RegExpMatchArray | [Promise][36]&lt;([Response][40] \| [undefined][41])>)** If any ES6 imports are found,
+Returns **([Array][44]&lt;[string][45]> | [boolean][46] | any | RegExpMatchArray | [Promise][43]&lt;([Response][47] \| [undefined][48])>)** If any ES6 imports are found,
 the original import strings will be returned.
 
 ### VueComponents
@@ -85,17 +92,7 @@ Extract the imported .vue components in the parent file.
 
 -   `fileString`  The raw text content of the file (.vue).
 
-Returns **(null | [Array][37]&lt;[string][38]>)** An array of imported .vue components.
-
-### ReturnFirstMatch
-
-Internal RegEx utility - return just the first RegEx match.
-
-#### Parameters
-
--   `matched`  The match array returned by the RegEx expression.
-
-Returns **(null | any)** The first matched string, or null (if none).
+Returns **(null | [Array][44]&lt;[string][45]>)** An array of imported .vue components.
 
 ### VueTemplate
 
@@ -105,7 +102,7 @@ Get the entire string within the <template> tag in the .vue file.
 
 -   `fileString`  The raw text content (string) of the file.
 
-Returns **[String][38]** The <template> string from the .vue file.
+Returns **[String][45]** The <template> string from the .vue file.
 
 ### VueScript
 
@@ -115,7 +112,7 @@ Get the entire string within the <script> tag in the .vue file.
 
 -   `fileString`  The raw text content (string) of the file.
 
-Returns **[String][38]** The <script> string from the .vue file.
+Returns **[String][45]** The <script> string from the .vue file.
 
 ### VueStyle
 
@@ -125,7 +122,7 @@ Get the entire string within the <style> tag in the .vue file.
 
 -   `fileString`  The raw text content (string) of the file.
 
-Returns **[String][38]** The <style> string from the .vue file.
+Returns **[String][45]** The <style> string from the .vue file.
 
 ### VueData
 
@@ -135,7 +132,7 @@ Extract the imported data properties in the parent file.
 
 -   `fileString`  The raw text content of the file (.vue).
 
-Returns **(null | [Array][37]&lt;[string][38]>)** An array of declared data variables in the component.
+Returns **(null | [Array][44]&lt;[string][45]>)** An array of declared data variables in the component.
 
 ## Exports
 
@@ -149,7 +146,7 @@ Parse & export parent-child relationships between components to JSON.
 
 -   `directory`  The directory from which to read .vue files.
 
-Returns **[Boolean][39]** True if the file export succeeded, false if there was an error.
+Returns **[Boolean][46]** True if the file export succeeded, false if there was an error.
 
 ### ExportArchitecture
 
@@ -159,7 +156,7 @@ Parse & export structural relationships between components to JSON.
 
 -   `directory`  The directory from which to read .vue files.
 
-Returns **[Boolean][39]** True if the file export succeeded, false if there was an error.
+Returns **[Boolean][46]** True if the file export succeeded, false if there was an error.
 
 ## Util
 
@@ -174,7 +171,17 @@ Export JSON data to the filepath specified.
 -   `filePath`  The filepath to write to.
 -   `data`  The JSON-serializable data to write to a .json file.
 
-Returns **[Promise][36]&lt;[Boolean][39]>** True if file export completes successfully.
+Returns **[Promise][43]&lt;[Boolean][46]>** True if file export completes successfully.
+
+### ReturnFirstMatch
+
+Internal RegEx utility - return just the first RegEx match.
+
+#### Parameters
+
+-   `matched`  The match array returned by the RegEx expression.
+
+Returns **(null | any)** The first matched string, or null (if none).
 
 ### GetLineLength
 
@@ -184,7 +191,7 @@ Get the amount of lines in the given file string.
 
 -   `text`  The raw file text content.
 
-Returns **[number][42]** The number of lines in the file.
+Returns **[number][49]** The number of lines in the file.
 
 ## Analysis
 
@@ -198,7 +205,7 @@ Parse the structure of the Vue application and its components.
 
 -   `directory`  The directory from which to read .vue files.
 
-Returns **[Promise][36]&lt;[Array][37]&lt;[Object][43]>>** An array of objects containing properties related to the application structure.
+Returns **[Promise][43]&lt;[Array][44]&lt;[Object][50]>>** An array of objects containing properties related to the application structure.
 
 ### ParentChild
 
@@ -208,7 +215,41 @@ Parse parent-child relationships between components.
 
 -   `directory`  The directory from which to read .vue files.
 
-Returns **[Promise][36]&lt;\[]>** An array of objects with parent & child properties - one for each nested relationship.
+Returns **[Promise][43]&lt;\[]>** An array of objects with parent & child properties - one for each nested relationship.
+
+## MetaDataES6
+
+Description of MetaDataES6 Class.
+
+### Comments
+
+Get the comment tags in the the .vue file.
+
+#### Parameters
+
+-   `fileString`  The raw text content (string) of the file.
+
+Returns **[Array][44]&lt;[String][45]>** An array of comment strings from the .vue file.
+
+## Classes
+
+Get the css classes in the the .vue file.
+
+### Parameters
+
+-   `fileString`  The raw text content (string) of the file.
+
+Returns **[Array][44]&lt;[String][45]>** An array of css classes strings from the .vue file.
+
+## IdSelectors
+
+Get the css id selectors in the the .vue file.
+
+### Parameters
+
+-   `fileString`  The raw text content (string) of the file.
+
+Returns **[Array][44]&lt;[String][45]>** An array of css id selector strings from the .vue file.
 
 [1]: #files
 
@@ -220,7 +261,7 @@ Returns **[Promise][36]&lt;\[]>** An array of objects with parent & child proper
 
 [5]: #parameters-1
 
-[6]: #imports
+[6]: #metadatavue
 
 [7]: #es6
 
@@ -230,39 +271,39 @@ Returns **[Promise][36]&lt;\[]>** An array of objects with parent & child proper
 
 [10]: #parameters-3
 
-[11]: #returnfirstmatch
+[11]: #vuetemplate
 
 [12]: #parameters-4
 
-[13]: #vuetemplate
+[13]: #vuescript
 
 [14]: #parameters-5
 
-[15]: #vuescript
+[15]: #vuestyle
 
 [16]: #parameters-6
 
-[17]: #vuestyle
+[17]: #vuedata
 
 [18]: #parameters-7
 
-[19]: #vuedata
+[19]: #exports
 
-[20]: #parameters-8
+[20]: #exportparentchild
 
-[21]: #exports
+[21]: #parameters-8
 
-[22]: #exportparentchild
+[22]: #exportarchitecture
 
 [23]: #parameters-9
 
-[24]: #exportarchitecture
+[24]: #util
 
-[25]: #parameters-10
+[25]: #writejson
 
-[26]: #util
+[26]: #parameters-10
 
-[27]: #writejson
+[27]: #returnfirstmatch
 
 [28]: #parameters-11
 
@@ -280,18 +321,32 @@ Returns **[Promise][36]&lt;\[]>** An array of objects with parent & child proper
 
 [35]: #parameters-14
 
-[36]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise
+[36]: #metadataes6
 
-[37]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array
+[37]: #comments
 
-[38]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String
+[38]: #parameters-15
 
-[39]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean
+[39]: #classes
 
-[40]: https://developer.mozilla.org/docs/Web/Guide/HTML/HTML5
+[40]: #parameters-16
 
-[41]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/undefined
+[41]: #idselectors
 
-[42]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number
+[42]: #parameters-17
 
-[43]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object
+[43]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise
+
+[44]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array
+
+[45]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String
+
+[46]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean
+
+[47]: https://developer.mozilla.org/docs/Web/Guide/HTML/HTML5
+
+[48]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/undefined
+
+[49]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number
+
+[50]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object

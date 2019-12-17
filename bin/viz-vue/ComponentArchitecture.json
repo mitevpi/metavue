@@ -4,7 +4,8 @@
         "name": "App",
         "lines": 149,
         "imports": null,
-        "data": null,
+        "data": [],
+        "dataCount": 0,
         "components": [
             "Footer",
             "Header",
@@ -14,44 +15,99 @@
             "UserInterface",
             "Splash"
         ],
+        "cssClasses": [
+            ".main",
+            ".v-card",
+            ".main",
+            ".v-card",
+            ".main",
+            ".v-card",
+            ".fade-enter-active",
+            ".fade-leave-active",
+            ".fade-enter",
+            ".fade-leave-to",
+            ".fade-leave-active",
+            ".delayed-fade-enter-active",
+            ".delayed-fade-enter",
+            ".delayed-fade-leave-active",
+            ".delayed-fade-leave-to",
+            ".fade-leave-active"
+        ],
+        "cssIdSelectors": [
+            "#footer"
+        ],
         "templateLength": 35,
         "scriptLength": 47,
-        "styleLength": 64
+        "styleLength": 64,
+        "commentLength": 4,
+        "cssClassesCount": 16,
+        "cssIdSelectorsCount": 1
     },
     {
         "path": "/Users/mitevpi/Documents/GitHub/stroll-app/src/components/About.vue",
         "name": "About",
         "lines": 220,
         "imports": null,
-        "data": null,
+        "data": [],
+        "dataCount": 0,
         "components": null,
+        "cssClasses": [
+            ".display-block",
+            ".display-none",
+            ".sources",
+            ".mobile-margins"
+        ],
+        "cssIdSelectors": [],
         "templateLength": 154,
         "scriptLength": 30,
-        "styleLength": 33
+        "styleLength": 33,
+        "commentLength": 2,
+        "cssClassesCount": 4,
+        "cssIdSelectorsCount": 0
     },
     {
         "path": "/Users/mitevpi/Documents/GitHub/stroll-app/src/components/Footer.vue",
         "name": "Footer",
         "lines": 80,
         "imports": null,
-        "data": null,
+        "data": [],
+        "dataCount": 0,
         "components": null,
+        "cssClasses": [
+            ".footer-bottom",
+            ".footer-icon"
+        ],
+        "cssIdSelectors": [],
         "templateLength": 59,
         "scriptLength": 7,
-        "styleLength": 11
+        "styleLength": 11,
+        "commentLength": 0,
+        "cssClassesCount": 2,
+        "cssIdSelectorsCount": 0
     },
     {
         "path": "/Users/mitevpi/Documents/GitHub/stroll-app/src/components/Header.vue",
         "name": "Header",
         "lines": 141,
         "imports": null,
-        "data": null,
+        "data": [],
+        "dataCount": 0,
         "components": [
             "UIMenu"
         ],
+        "cssClasses": [
+            ".v-btn",
+            ".mobile-bg",
+            ".logo",
+            ".v-btn"
+        ],
+        "cssIdSelectors": [],
         "templateLength": 53,
         "scriptLength": 42,
-        "styleLength": 43
+        "styleLength": 43,
+        "commentLength": 5,
+        "cssClassesCount": 4,
+        "cssIdSelectorsCount": 0
     },
     {
         "path": "/Users/mitevpi/Documents/GitHub/stroll-app/src/components/LogIn.vue",
@@ -62,10 +118,28 @@
             "data",
             "email"
         ],
+        "dataCount": 2,
         "components": null,
+        "cssClasses": [
+            ".constrained-width",
+            ".login-container",
+            ".form-button",
+            ".form-button-flex",
+            ".v-expansion-panel",
+            ".v-expansion-panel__container",
+            ".v-expansion-panel__header",
+            ".v-expansion-panel__body",
+            ".v-select-list"
+        ],
+        "cssIdSelectors": [
+            "#form-button-container"
+        ],
         "templateLength": 58,
         "scriptLength": 105,
-        "styleLength": 47
+        "styleLength": 47,
+        "commentLength": 5,
+        "cssClassesCount": 9,
+        "cssIdSelectorsCount": 1
     },
     {
         "path": "/Users/mitevpi/Documents/GitHub/stroll-app/src/components/Results.vue",
@@ -79,23 +153,49 @@
             "roundAmount",
             "currentPage"
         ],
+        "dataCount": 5,
         "components": [
             "UIResultsCard"
         ],
+        "cssClasses": [
+            ".ui-fade-enter-active",
+            ".ui-fade-leave-active",
+            ".ui-fade-enter",
+            ".ui-fade-leave-to",
+            ".display-block",
+            ".display-none",
+            ".v-flex-reg",
+            ".v-flex-mobile",
+            ".v-card-mobile",
+            ".v-btn__content"
+        ],
+        "cssIdSelectors": [],
         "templateLength": 78,
         "scriptLength": 185,
-        "styleLength": 55
+        "styleLength": 55,
+        "commentLength": 9,
+        "cssClassesCount": 10,
+        "cssIdSelectorsCount": 0
     },
     {
         "path": "/Users/mitevpi/Documents/GitHub/stroll-app/src/components/Splash.vue",
         "name": "Splash",
         "lines": 640,
         "imports": null,
-        "data": null,
+        "data": [],
+        "dataCount": 0,
         "components": null,
+        "cssClasses": [
+            ".canvas-size-default",
+            ".canvas-size-small"
+        ],
+        "cssIdSelectors": [],
         "templateLength": 5,
         "scriptLength": 601,
-        "styleLength": 31
+        "styleLength": 31,
+        "commentLength": 5,
+        "cssClassesCount": 2,
+        "cssIdSelectorsCount": 0
     },
     {
         "path": "/Users/mitevpi/Documents/GitHub/stroll-app/src/components/UI/DeprecatedMobileUIControls.vue",
@@ -123,12 +223,48 @@
             "testingMonochrome",
             "testingShowGrass"
         ],
+        "dataCount": 17,
         "components": [
             "UIFilterModal"
         ],
+        "cssClasses": [
+            ".p-monochrome",
+            ".pathfinding-card-mobile",
+            ".pathfinding-card-mobile-monochrome",
+            ".duration-card-mobile",
+            ".duration-card-mobile-monochrome",
+            ".ui-fade-enter-active",
+            ".ui-fade-leave-active",
+            ".ui-fade-enter",
+            ".ui-fade-leave-to",
+            ".fade-leave-active",
+            ".transparent",
+            ".active-method-img",
+            ".inactive-method-img",
+            ".location-textfield-mobile",
+            ".left-right-margin",
+            ".fade-out-enter-active",
+            ".fade-out-leave-active",
+            ".fade-out-enter",
+            ".fade-out-leave-to",
+            ".fade-leave-active",
+            ".anim-explode",
+            ".v-expansion-panel",
+            ".v-expansion-panel__container",
+            ".v-expansion-panel__header",
+            ".v-expansion-panel__body",
+            ".v-select-list",
+            ".mdi-chevron-down",
+            ".mobile-expansion",
+            ".v-expansion-panel__header__icon"
+        ],
+        "cssIdSelectors": [],
         "templateLength": 237,
         "scriptLength": 369,
-        "styleLength": 94
+        "styleLength": 94,
+        "commentLength": 17,
+        "cssClassesCount": 29,
+        "cssIdSelectorsCount": 0
     },
     {
         "path": "/Users/mitevpi/Documents/GitHub/stroll-app/src/components/UI/UIControls.vue",
@@ -153,12 +289,30 @@
             "scoreSlider",
             "filterBy"
         ],
+        "dataCount": 14,
         "components": [
             "UIFilterModal"
         ],
+        "cssClasses": [
+            ".ui-fade-enter-active",
+            ".ui-fade-leave-active",
+            ".ui-fade-enter",
+            ".ui-fade-leave-to",
+            ".fade-leave-active",
+            ".v-select-list",
+            ".v-expansion-panel",
+            ".v-expansion-panel__container",
+            ".v-expansion-panel__header",
+            ".v-expansion-panel__body",
+            ".v-card"
+        ],
+        "cssIdSelectors": [],
         "templateLength": 71,
         "scriptLength": 336,
-        "styleLength": 24
+        "styleLength": 24,
+        "commentLength": 9,
+        "cssClassesCount": 11,
+        "cssIdSelectorsCount": 0
     },
     {
         "path": "/Users/mitevpi/Documents/GitHub/stroll-app/src/components/UI/UIError.vue",
@@ -169,10 +323,16 @@
             "data",
             "addressError"
         ],
+        "dataCount": 2,
         "components": null,
+        "cssClasses": [],
+        "cssIdSelectors": [],
         "templateLength": 6,
         "scriptLength": 25,
-        "styleLength": 0
+        "styleLength": 0,
+        "commentLength": 2,
+        "cssClassesCount": 0,
+        "cssIdSelectorsCount": 0
     },
     {
         "path": "/Users/mitevpi/Documents/GitHub/stroll-app/src/components/UI/UIFilterModal.vue",
@@ -185,21 +345,43 @@
             "text",
             "value"
         ],
+        "dataCount": 4,
         "components": null,
+        "cssClasses": [
+            ".v-card__title",
+            ".v-input",
+            ".v-card",
+            ".pa-2",
+            ".v-input--radio-group",
+            ".v-messages"
+        ],
+        "cssIdSelectors": [],
         "templateLength": 32,
         "scriptLength": 42,
-        "styleLength": 24
+        "styleLength": 24,
+        "commentLength": 2,
+        "cssClassesCount": 6,
+        "cssIdSelectorsCount": 0
     },
     {
         "path": "/Users/mitevpi/Documents/GitHub/stroll-app/src/components/UI/UILoading.vue",
         "name": "UILoading",
         "lines": 42,
         "imports": null,
-        "data": null,
+        "data": [],
+        "dataCount": 0,
         "components": null,
+        "cssClasses": [
+            ".v-card",
+            ".v-img"
+        ],
+        "cssIdSelectors": [],
         "templateLength": 16,
         "scriptLength": 13,
-        "styleLength": 10
+        "styleLength": 10,
+        "commentLength": 0,
+        "cssClassesCount": 2,
+        "cssIdSelectorsCount": 0
     },
     {
         "path": "/Users/mitevpi/Documents/GitHub/stroll-app/src/components/UI/UIMap.vue",
@@ -208,22 +390,53 @@
         "imports": [
             "import mapStyle from \"../../assets/mapStyle.json\";"
         ],
-        "data": null,
+        "data": [],
+        "dataCount": 0,
         "components": null,
+        "cssClasses": [
+            ".google-map"
+        ],
+        "cssIdSelectors": [],
         "templateLength": 3,
         "scriptLength": 94,
-        "styleLength": 8
+        "styleLength": 8,
+        "commentLength": 2,
+        "cssClassesCount": 1,
+        "cssIdSelectorsCount": 0
     },
     {
         "path": "/Users/mitevpi/Documents/GitHub/stroll-app/src/components/UI/UIMenu.vue",
         "name": "UIMenu",
         "lines": 140,
         "imports": null,
-        "data": null,
+        "data": [],
+        "dataCount": 0,
         "components": null,
+        "cssClasses": [
+            ".ham",
+            ".hamRotate",
+            ".active",
+            ".hamRotate180",
+            ".active",
+            ".line",
+            ".ham4",
+            ".top",
+            ".ham4",
+            ".bottom",
+            ".ham4",
+            ".active",
+            ".top",
+            ".ham4",
+            ".active",
+            ".bottom"
+        ],
+        "cssIdSelectors": [],
         "templateLength": 36,
         "scriptLength": 66,
-        "styleLength": 35
+        "styleLength": 35,
+        "commentLength": 3,
+        "cssClassesCount": 16,
+        "cssIdSelectorsCount": 0
     },
     {
         "path": "/Users/mitevpi/Documents/GitHub/stroll-app/src/components/UI/UIRadarChart.vue",
@@ -242,25 +455,40 @@
             "pointHoverBorderColor",
             "fill"
         ],
+        "dataCount": 8,
         "components": null,
+        "cssClasses": [],
+        "cssIdSelectors": [],
         "templateLength": 3,
         "scriptLength": 246,
-        "styleLength": 8
+        "styleLength": 8,
+        "commentLength": 6,
+        "cssClassesCount": 0,
+        "cssIdSelectorsCount": 0
     },
     {
         "path": "/Users/mitevpi/Documents/GitHub/stroll-app/src/components/UI/UIResultsCard.vue",
         "name": "UIResultsCard",
         "lines": 121,
         "imports": null,
-        "data": null,
+        "data": [],
+        "dataCount": 0,
         "components": [
             "UIRadarChart",
             "UIScore",
             "UIMap"
         ],
+        "cssClasses": [
+            ".footer-bottom",
+            ".footer-icon"
+        ],
+        "cssIdSelectors": [],
         "templateLength": 55,
         "scriptLength": 40,
-        "styleLength": 23
+        "styleLength": 23,
+        "commentLength": 1,
+        "cssClassesCount": 2,
+        "cssIdSelectorsCount": 0
     },
     {
         "path": "/Users/mitevpi/Documents/GitHub/stroll-app/src/components/UI/UIScore.vue",
@@ -272,35 +500,70 @@
             "shownParkScore",
             "shownGreenScore"
         ],
+        "dataCount": 3,
         "components": null,
+        "cssClasses": [
+            ".align-center",
+            ".container"
+        ],
+        "cssIdSelectors": [],
         "templateLength": 59,
         "scriptLength": 26,
-        "styleLength": 19
+        "styleLength": 19,
+        "commentLength": 0,
+        "cssClassesCount": 2,
+        "cssIdSelectorsCount": 0
     },
     {
         "path": "/Users/mitevpi/Documents/GitHub/stroll-app/src/components/UI/UIScoreHeader.vue",
         "name": "UIScoreHeader",
         "lines": 55,
         "imports": null,
-        "data": null,
+        "data": [],
+        "dataCount": 0,
         "components": null,
+        "cssClasses": [
+            ".score",
+            ".v-card__title"
+        ],
+        "cssIdSelectors": [],
         "templateLength": 21,
         "scriptLength": 12,
-        "styleLength": 19
+        "styleLength": 19,
+        "commentLength": 0,
+        "cssClassesCount": 2,
+        "cssIdSelectorsCount": 0
     },
     {
         "path": "/Users/mitevpi/Documents/GitHub/stroll-app/src/components/UserInterface.vue",
         "name": "UserInterface",
         "lines": 97,
         "imports": null,
-        "data": null,
+        "data": [],
+        "dataCount": 0,
         "components": [
             "UIControls",
             "UIError",
             "UILoading"
         ],
+        "cssClasses": [
+            ".ui-fade-enter-active",
+            ".ui-fade-leave-active",
+            ".ui-fade-enter",
+            ".ui-fade-leave-to",
+            ".loading",
+            ".slide-in-enter-active",
+            ".slide-in-leave-active",
+            ".slide-in-enter",
+            ".slide-in-leave-to",
+            ".fade-leave-active"
+        ],
+        "cssIdSelectors": [],
         "templateLength": 21,
         "scriptLength": 47,
-        "styleLength": 26
+        "styleLength": 26,
+        "commentLength": 4,
+        "cssClassesCount": 10,
+        "cssIdSelectorsCount": 0
     }
 ]

@@ -4,10 +4,10 @@
  */
 export { Files } from "./api/Files";
 /**
- * Description of Imports Class.
- * @property {Imports}
+ * Description of MetaDataVue Class.
+ * @property {MetaDataVue}
  */
-export { Imports } from "./api/Imports";
+export { MetaDataVue } from "./api/MetaDataVue";
 /**
  * Description of Exports Class.
  * @property {Exports}
@@ -23,3 +23,8 @@ export { Util } from "./api/Util";
  * @property {Analysis}
  */
 export { Analysis } from "./api/Analysis";
+/**
+ * Description of MetaDataES6 Class.
+ * @property {MetaDataES6}
+ */
+export { MetaDataES6 } from "./api/MetaDataES6";

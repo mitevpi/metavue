@@ -41,6 +41,10 @@ directory of the Vue application with `.json` files containing the
 metadata of your Vue application, and a static site at `index.html`
 which can be used to visualize the data.
 
+Deply or run the `index.html` file in the `.metavue` folder using a http 
+server to visualize the data export, or import the `json` files yourself 
+in a data visualization platform to explore your application's metadata. 
+
 #### Sample
 
 ```json

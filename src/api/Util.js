@@ -26,6 +26,18 @@ export class Util {
   }
 
   /**
+   * Internal RegEx utility - return just the first RegEx match.
+   * @param matched The match array returned by the RegEx expression.
+   * @returns {null|*} The first matched string, or null (if none).
+   */
+  static ReturnFirstMatch(matched) {
+    if (matched) {
+      return matched[0];
+    }
+    return null;
+  }
+
+  /**
    * Get the amount of lines in the given file string.
    * @param text The raw file text content.
    * @returns {number} The number of lines in the file.

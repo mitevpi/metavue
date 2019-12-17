@@ -11,6 +11,9 @@ test("Analysis.Architecture", async () => {
   const parsed = await Analysis.Architecture(dir);
   const data = [];
   const components = [];
+  const template = [];
+  const script = [];
+  const style = [];
 
   expect(parsed.length).toBeGreaterThan(0);
   parsed.map(item => {
@@ -18,9 +21,15 @@ test("Analysis.Architecture", async () => {
     expect(item.name).not.toBeNull();
     data.push(item.data);
     components.push(item.components);
+    template.push(item.template);
+    script.push(item.script);
+    style.push(item.style);
   });
   expect(data.length).toBeGreaterThan(0);
   expect(components.length).toBeGreaterThan(0);
+  expect(script.length).toBeGreaterThan(0);
+  expect(style.length).toBeGreaterThan(0);
+  expect(template.length).toBeGreaterThan(0);
 });
 
 test("Analysis.ParentChild", async () => {

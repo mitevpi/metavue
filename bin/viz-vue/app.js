@@ -5,13 +5,19 @@ import BarChartStacked from "./BarChartStacked.js";
 new Vue({
   el: "#app",
   template: `
-  <div id="app">
+  <div id="app" class="chart-container">
   <single-file-component></single-file-component>
   <div v-if="architectureData.length >0">
+    <h2>Composition</h2>
     <bar-chart-stacked :uniqueComps="uniqueCompsAll" :styleCount="styleCount" :templateCount="templateCount" :scriptCount="scriptCount"/>
-    <bar-chart :uniqueComps="uniqueCompsParent" :values="compImportCount" label="# of Child Components"/>
+    <h2>Inner Workings</h2>
+    <bar-chart :uniqueComps="uniqueCompsAll" :values="compImportCount" label="# of Child Components"/>
     <bar-chart :uniqueComps="uniqueCompsAll" :values="es6ImportCount" label="# of ES6 Imports"/>
     <bar-chart :uniqueComps="uniqueCompsAll" :values="uniqueCompsData" label="# Data Properties"/>
+    <h2>Style</h2>
+    <bar-chart :uniqueComps="uniqueCompsAll" :values="cssClassesCount" label="# CSS Classes"/>
+    <bar-chart :uniqueComps="uniqueCompsAll" :values="cssIdSelectorsCount" label="# CSS ID Selectors"/>
+
 </div>
 
 </div>
@@ -27,15 +33,6 @@ new Vue({
     architectureData: []
   },
   computed: {
-    uniqueCompsParent() {
-      return [
-        ...new Set(
-          this.parentChildData.map(r => {
-            return r.parent;
-          })
-        )
-      ];
-    },
     uniqueCompsAll() {
       return [
         ...new Set(
@@ -45,19 +42,14 @@ new Vue({
         )
       ];
     },
-    uniqueCompsDataParent() {
-      return this.uniqueCompsParent.map(c => {
-        return this.architectureData.filter(s => s.name === c)[0];
-      });
-    },
     uniqueCompsDataAll() {
       return this.uniqueCompsAll.map(c => {
         return this.architectureData.filter(s => s.name === c)[0];
       });
     },
     compImportCount() {
-      return this.uniqueCompsDataParent.map(c => {
-        return c.components.length || 0;
+      return this.uniqueCompsDataAll.map(c => {
+        return c.components === null ? 0 : c.components.length;
       });
     },
     uniqueCompsData() {
@@ -83,6 +75,16 @@ new Vue({
     styleCount() {
       return this.uniqueCompsDataAll.map(c => {
         return c.styleLength;
+      });
+    },
+    cssClassesCount() {
+      return this.uniqueCompsDataAll.map(c => {
+        return c.cssClassesCount;
+      });
+    },
+    cssIdSelectorsCount() {
+      return this.uniqueCompsDataAll.map(c => {
+        return c.cssIdSelectorsCount;
       });
     }
   },
