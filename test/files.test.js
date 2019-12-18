@@ -1,7 +1,6 @@
 import { Files } from "../src";
 
-const dir = "/Users/mitevpi/Documents/GitHub/stroll-app";
-// const dir = "C:\\Users\\pmitev\\Documents\\GitHub\\stroll-app\\";
+const dir = process.env.METAVUE_DIR;
 
 test("import Files", () => {
   expect.anything(Files);

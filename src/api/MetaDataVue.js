@@ -5,6 +5,7 @@ const es6Regex = new RegExp(
 );
 
 // const hugeRegex = new RegExp(/export.default[^;]*/g);
+// const computedRegex = new RegExp(/computed:\s+?[\s\S]*(?=}.)/g);
 const vueCompRegex = new RegExp(/components:\s+?[^}]*}/g);
 const vueTemplateRegex = new RegExp(/<template>([\s\S]*)<\/template>/g);
 const vueScriptRegex = new RegExp(/<script>([\s\S]*)<\/script>/g);

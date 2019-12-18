@@ -1,7 +1,6 @@
 import { Analysis } from "../src";
 
-const dir = "/Users/mitevpi/Documents/GitHub/stroll-app";
-// const dir = "C:\\Users\\pmitev\\Documents\\GitHub\\view-analysis\\";
+const dir = process.env.METAVUE_DIR;
 
 test("import Analysis", () => {
   expect.anything(Analysis);

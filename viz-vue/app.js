@@ -1,3 +1,4 @@
+/* eslint-disable no-undef,import/extensions,no-new */
 import SingleFileComponent from "./SingleFileComponent.js";
 import BarChart from "./BarChart.js";
 import BarChartStacked from "./BarChartStacked.js";
