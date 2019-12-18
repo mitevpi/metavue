@@ -7,4 +7,4 @@ wip
 dist
 bin/script.js
 bin/viz
-bin/viz-vue
+src/viz-vue

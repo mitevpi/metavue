@@ -4,17 +4,17 @@ export default {
     <canvas ref="myChart"></canvas>
   </div>
   `,
-  props: ['uniqueComps', "styleCount", "templateCount", "scriptCount"],
+  props: ["uniqueComps", "styleCount", "templateCount", "scriptCount"],
   data() {
     return {
       message: "Sample"
     };
   },
-  mounted (){
+  mounted() {
     this.CreateComponentImportBar();
   },
-  methods:{
-    CreateComponentImportBar(){
+  methods: {
+    CreateComponentImportBar() {
       const ctx = this.$refs.myChart.getContext("2d");
       const myChart = new Chart(ctx, {
         type: "bar",
@@ -22,26 +22,26 @@ export default {
           labels: this.uniqueComps,
           datasets: [
             {
-              label: 'Style',
+              label: "Style",
               data: this.styleCount,
-              backgroundColor: '#D6E9C6' // green
+              backgroundColor: "#D6E9C6" // green
             },
             {
-              label: 'Template',
+              label: "Template",
               data: this.templateCount,
-              backgroundColor: '#FAEBCC' // yellow
+              backgroundColor: "#FAEBCC" // yellow
             },
             {
-              label: 'Script',
+              label: "Script",
               data: this.scriptCount,
-              backgroundColor: '#EBCCD1' // red
+              backgroundColor: "#EBCCD1" // red
             }
           ]
         },
         options: {
           title: {
             display: true,
-            text: 'Component Composition'
+            text: "Component Composition"
           },
           responsive: true,
           maintainAspectRatio: false,

@@ -4,17 +4,17 @@ export default {
     <canvas ref="myChart"></canvas>
   </div>
   `,
-  props: ['uniqueComps', 'values', 'label'],
+  props: ["uniqueComps", "values", "label"],
   data() {
     return {
       message: "Sample"
     };
   },
-  mounted (){
+  mounted() {
     this.CreateComponentImportBar();
   },
-  methods:{
-    CreateComponentImportBar(){
+  methods: {
+    CreateComponentImportBar() {
       const ctx = this.$refs.myChart.getContext("2d");
       const myChart = new Chart(ctx, {
         type: "bar",

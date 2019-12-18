@@ -27,7 +27,7 @@ const options = yargs
   ).argv;
 
 const dir = options.directory;
-const vizDir = path.resolve(__dirname, "viz-vue");
+const vizDir = path.resolve(__dirname, "viz");
 
 // COPY VISUALIZATION FILES
 const dirEntries = fs.readdirSync(vizDir, { withFileTypes: true });

@@ -1,18 +1,38 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <script src="./script.js"></script>
-  <script src="https://unpkg.com/vis-network@6.4.7/dist/vis-network.min.js"></script>
-  <link rel="stylesheet" href="./styles.css">
-  <title>Component Relationships</title>
+  <title>MetaVue</title>
+  <meta name="description" content="MetaVue Data Visualization">
+  <meta name="author" content="Petr Mitev">
+
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <style>
+  html, body {
+    margin: 5px;
+    padding: 0;
+  }
+
+  .chart-container {
+    width: 1000px;
+    height: 300px;
+    padding: 0;
+    margin: auto;
+    display: block;
+  }
+
+  #app {
+    font-family: "Open Sans", Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  </style>
 </head>
 <body>
-<p>
-  Scale nodes and edges depending on their value. Hover over nodes and edges to
-  get more information.
-</p>
-<div id="mynetwork"></div>
-
+<div id="app">
+</div>
+<script type="module" src="./metaviz.min.js"></script>
 </body>
 </html>

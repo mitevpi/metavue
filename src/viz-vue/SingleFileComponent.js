@@ -7,7 +7,7 @@ export default {
   `,
   data() {
     return {
-      message: 'Component & Application Analysis'
-    }
+      message: "Component & Application Analysis"
+    };
   }
-}
+};

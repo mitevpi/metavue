@@ -4,18 +4,36 @@
   <title>MetaVue</title>
   <meta name="description" content="MetaVue Data Visualization">
   <meta name="author" content="Petr Mitev">
-  <link rel="stylesheet" href="index.css">
 
   <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+  <style>
+  html, body {
+    margin: 5px;
+    padding: 0;
+  }
+
+  .chart-container {
+    width: 1000px;
+    height: 300px;
+    padding: 0;
+    margin: auto;
+    display: block;
+  }
+
+  #app {
+    font-family: "Open Sans", Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  </style>
 </head>
 <body>
 <div id="app">
-  <!-- <single-file-component></single-file-component>
-  <bar-chart></bar-chart> -->
 </div>
-<!--<script type="module" src="./SingleFileComponent.js"></script>-->
 <script type="module" src="./app.js"></script>
 </body>
 </html>
