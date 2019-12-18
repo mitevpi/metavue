@@ -28,6 +28,12 @@ const options = yargs
 
 const dir = options.directory;
 const vizDir = path.resolve(__dirname, "viz");
+const destinationDir = path.join(dir, ".metavue");
+
+// create directory
+if (!fs.existsSync(destinationDir)) {
+  fs.mkdirSync(destinationDir);
+}
 
 // COPY VISUALIZATION FILES
 const dirEntries = fs.readdirSync(vizDir, { withFileTypes: true });
